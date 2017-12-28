@@ -348,3 +348,132 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
+
+"----------
+" 会社設定　※あとで整理
+"----------
+
+" ファイル操作
+set noundofile
+set nowritebackup
+set noswapfile
+
+" タブ・インデント設定
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+" ignore auto line-feed
+set formatoptions=q
+
+" auto parenthesis
+imap ( ()<Left>
+imap [ []<Left>
+imap { {}<Left>
+imap （ （）<Left>
+imap 「 「」<Left>
+
+
+" Referred from http://itchyny.hatenablog.com/entry/2014/12/25/090000
+nnoremap Y y$
+set display=lastline
+set pumheight=10
+set showmatch
+set matchtime=1
+
+" Visible to Tab, Space, Line Feed
+set list
+set listchars=tab:>.,trail:_,extends:>,precedes:<,nbsp:%
+
+" Folding
+set foldtext=Foldtext()
+set foldcolumn=3
+set fillchars=vert:\|
+hi Folded gui=bold term=standout ctermbg=LightGrey ctermfg=DarkBlue guibg=Grey30 guifg=Grey80
+hi FoldColumn gui=bold term=standout ctermbg=LightGrey ctermfg=DarkBlue guibg=Grey guifg=DarkBlue
+
+set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileformats=unix,dos,mac
+
+" 新しいウィンドウを下に開く
+set splitbelow
+" 新しいウィンドウを右に開く
+set splitright
+
+function! EmSpace()
+    highlight EmSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
+endfunction
+if has('syntax')
+    augroup EmSpace
+	autocmd!
+	autocmd ColorScheme	  * call EmSpace()
+	autocmd VimEnter,WinEnter * match EmSpace /　/
+    augroup END
+    call EmSpace()
+endif
+
+" vim起動時のみruntimepathにneobundle.vimを追加
+if has('vim_starting')
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+endif
+
+" neobundle.vimの初期化
+" NeoBundleを更新するための設定
+call neobundle#begin(expand('~/.vim/bundle'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+"
+" 読み込むプラグインを記載
+NeoBundle 'Shougo/unite.vim'
+"NeoBundle 'Shougo/neocomplete'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'pangloss/vim-javascript'
+call neobundle#end()
+
+" 読み込んだプラグインも含め、ファイルタイプの検出、ファイルタイプ別プラグイン/インデントを有効化する
+filetype plugin indent on
+
+" インストールのチェック
+NeoBundleCheck
+
+"--------------------------------------------------
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+imap <expr><TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ neosnippet#expandable_or_jumpable() ?
+  \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+let g:neosnippet#enable_snipmate_compatibility = 1
+let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet-snippets/snippets/,~/.vim/snippets'
+"--------------------------------------------------
+" neocomplcache
+let g:acp_enableAtStartup = 0
+" Use neocomplcache.
+let g:neocomplcache_enable_at_startup = 1
+" Use smartcase.
+let g:neocomplcache_enable_smart_case = 1
