@@ -2,9 +2,9 @@ scriptencoding utf-8
 " vim:set ts=8 sts=2 sw=2 tw=0: (この行に関しては:help modelineを参照)
 "
 " An example for a Japanese version gvimrc file.
-" 日本語版のデフォルトGUI設定ファイル(gvimrc) - Vim7用試作
+" 日本語版のデフォルトGUI設定ファイル(gvimrc) - Vim 7.4
 "
-" Last Change: 28-Dec-2017.
+" Last Change: 30-Dec-2017.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -46,7 +46,7 @@ endif
 " ユーザ優先設定($HOME/.gvimrc_first.vim)があれば読み込む。読み込んだ後に変
 " 数g:gvimrc_first_finishに非0な値が設定されていた場合には、それ以上の設定
 " ファイルの読込を中止する。
-if 0 && exists('$HOME') && filereadable($HOME . '/.gvimrc_first.vim')
+if 1 && exists('$HOME') && filereadable($HOME . '/.gvimrc_first.vim')
   unlet! g:gvimrc_first_finish
   source $HOME/.gvimrc_first.vim
   if exists('g:gvimrc_first_finish') && g:gvimrc_first_finish != 0
@@ -63,8 +63,7 @@ endif
 
 "---------------------------------------------------------------------------
 " カラー設定:
-"colorscheme morning
-colorscheme evening
+" colorscheme morning
 
 "---------------------------------------------------------------------------
 " フォント設定:
@@ -92,12 +91,11 @@ endif
 " ウインドウの幅
 set columns=80
 " ウインドウの高さ
-" set lines=25
 set lines=50
 " コマンドラインの高さ(GUI使用時)
 set cmdheight=2
 " 画面を黒地に白にする (次行の先頭の " を削除すれば有効になる)
-"colorscheme evening " (GUI使用時)
+colorscheme evening " (GUI使用時)
 
 "---------------------------------------------------------------------------
 " 日本語入力に関する設定:
@@ -176,15 +174,14 @@ if has('printer')
   endif
 endif
 
-" Copyright (C) 2009-2013 KaoriYa/MURAOKA Taro
+" Copyright (C) 2009-2016 KaoriYa/MURAOKA Taro
 
 "---------------------------------------------------------------------------
-" Add my configuration
+" Last Change:  2017/12/30
+" Maintainer:   Yura Okada
 "---------------------------------------------------------------------------
 
-if !exists("syntax_on")
-  syntax on
-endif
-
-autocmd GUIEnter * set transparency=200
-
+"---------------------------------------------------------------------------
+" 画面表示に関する設定
+" 透過度を設定
+autocmd GUIEnter * set transparency=220
