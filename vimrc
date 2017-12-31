@@ -1,13 +1,8 @@
-set encoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
-set fileformats=unix,dos,mac
-scriptencoding utf-8
-
 "---------------------------------------------------------------------------
 " Last Change:  2017/12/30
 " Maintainer:   Yura Okada
 "---------------------------------------------------------------------------
-
+scriptencoding utf-8
 "---------------------------------------------------------------------------
 " 全体に関する設定
 
@@ -83,7 +78,11 @@ set cmdheight=2
 set showcmd
 " タイトルを表示
 set title
-"
+" エンコード設定
+set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileformats=unix,dos,mac
+
 "---------------------------------------------------------------------------
 " ファイル操作に関する設定
 
