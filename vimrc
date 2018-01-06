@@ -1,5 +1,5 @@
 "---------------------------------------------------------------------------
-" Last Change:  2017/12/30
+" Last Change:  2018/01/06
 " Maintainer:   Yura Okada
 "---------------------------------------------------------------------------
 scriptencoding utf-8
@@ -23,10 +23,14 @@ set ignorecase
 set smartcase
 " ファイルの最後まで検索すると最初に戻る
 set wrapscan
+" 挙動を vi 互換ではなく、Vim のデフォルト設定にする
+set nocompatible
 
 "---------------------------------------------------------------------------
 " 編集に関する設定
 
+" IMEのオン/オフ
+set imdisable
 " タブ文字の画面上での幅
 set tabstop=4
 " <Tab>キーを押下時に半角スペースを挿入
@@ -37,6 +41,8 @@ set softtabstop=4
 set autoindent
 " インデントの画面上での幅
 set shiftwidth=4
+" カーソルを行頭、行末で止まらないようにする
+set whichwrap=b,s,h,l,<,>,[,]
 " バックスペースでインデントや改行を削除可能にする
 set backspace=indent,eol,start
 " 対応する括弧を表示する
@@ -54,8 +60,9 @@ set formatoptions=q
 " 補完メニューの高さ
 set pumheight=10
 
+" 張り付け時に自動で改行コードが入るのを防ぐ
+autocmd FileType * set formatoptions-=ro
 "---------------------------------------------------------------------------
-
 " 表示に関する設定
 
 " 行番号を表示
@@ -70,6 +77,8 @@ set listchars=tab:>.,trail:_,extends:>,precedes:<,nbsp:%
 set wrap
 " 折り返しの際に全量表示する
 set display=lastline
+" 暗い背景色に合わせた配色にする
+set background=dark
 " ステータス行を表示
 set laststatus=2
 " コマンドラインの高さの設定
@@ -83,6 +92,12 @@ set encoding=utf-8
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set fileformats=unix,dos,mac
 
+" 構文毎に文字色を変化させる
+syntax on
+" カラースキーマの指定
+colorscheme desert
+" 行番号の色
+highlight LineNr ctermfg=darkyellow
 "---------------------------------------------------------------------------
 " ファイル操作に関する設定
 
@@ -119,15 +134,23 @@ call neobundle#begin(expand('~/.vim/bundle'))
     NeoBundleFetch 'Shougo/neobundle.vim'
 
     NeoBundle 'Shougo/unite.vim'
+    NeoBundle 'Shougo/neomru.vim'
+
     NeoBundle 'Shougo/neocomplcache'
     NeoBundle 'Shougo/neosnippet'
     NeoBundle 'Shougo/neosnippet-snippets'
 
+    NeoBundle 'nathanaelkane/vim-indent-guides'
     NeoBundle 'itchyny/lightline.vim'
+    NeoBundle 'pangloss/vim-javascript'
+    NeoBundle 'vim-scripts/AnsiEsc.vim'
+    NeoBundle 'leafgarland/typescript-vim.git'
+
     NeoBundle 'plasticboy/vim-markdown'
     NeoBundle 'kannokanno/previm'
     NeoBundle 'tyru/open-browser.vim'
-    NeoBundle 'pangloss/vim-javascript'
+
+"   NeoBundle 'scrooloose/nerdtree'
 call neobundle#end()
 
 NeoBundleCheck
@@ -168,7 +191,30 @@ let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_min_syntax_length = 3
 
 "---------------------------------------------------------------------------
+" Markdown に関する設定
+
+au BufRead,BufNewFile *.md set filetype=markdown
+let g:previm_open_cmd = 'open -a Google\ Chrome'
+
+"---------------------------------------------------------------------------
+" NERDTree に関する設定
+
+" 隠しファイルを表示する
+let NERDTreeShowHidden = 1
+" ファイル指定で開かれた場合はNERDTreeは表示しない
+if !argc()
+  autocmd vimenter * NERDTree|normal gg3j
+endif
+"他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"---------------------------------------------------------------------------
+" vim-indent-guides の設定
+" インデントを可視化
+let g:indent_guides_enable_on_vim_startup = 1
+
+"---------------------------------------------------------------------------
 " ファイルタイプ/プラグイン/インデントの検出
-" ※なるべく最後に記載する
+
 filetype plugin indent on
 "---------------------------------------------------------------------------
