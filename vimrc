@@ -61,9 +61,6 @@ set formatoptions-=ro
 set formatoptions=q
 " 補完メニューの高さ
 set pumheight=10
-
-" 張り付け時に自動で改行コードが入るのを防ぐ
-autocmd FileType * set formatoptions-=ro
 "---------------------------------------------------------------------------
 " 表示に関する設定
 
