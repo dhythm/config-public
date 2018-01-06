@@ -31,6 +31,8 @@ set nocompatible
 
 " IMEのオン/オフ
 set imdisable
+" ヤンクとクリップボードを共有
+set clipboard=unnamed,autoselect
 " タブ文字の画面上での幅
 set tabstop=4
 " <Tab>キーを押下時に半角スペースを挿入
