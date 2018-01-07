@@ -13,15 +13,17 @@ umask   022
 
 # パス設定
 set path = ""
-set path = ($path /bin)
-set path = ($path /usr/bin)
-set path = ($path /usr/sbin)
-set path = ($path /usr/local/bin)
-set path = ($path $HOME/bin)
-set path = ($path $HOME/local/bin)
 
 # python 設定
-set path = ($path $HOME/.pyenv/versions/anaconda3-4.2.0/bin)
+set path = ($path $HOME/.pyenv/shims)
+
+# 共通設定
+set path = ($path $HOME/local/bin)
+set path = ($path $HOME/bin)
+set path = ($path /usr/local/bin)
+set path = ($path /usr/sbin)
+set path = ($path /usr/bin)
+set path = ($path /bin)
 
 #---------------------------------------------------------------------
 # shell の設定
@@ -64,4 +66,3 @@ alias reload     source ~/.cshrc
 alias updatedb  'sudo /usr/libexec/locate.updatedb'
 
 alias MacVim    'open -a /Applications/MacVim.app/Contents/MacOS/MacVim'
-
