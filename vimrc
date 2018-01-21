@@ -1,5 +1,5 @@
 "---------------------------------------------------------------------------
-" Last Change:  2018/01/06
+" Last Change:  2018/01/22
 " Maintainer:   Yura Okada
 "---------------------------------------------------------------------------
 scriptencoding utf-8
@@ -30,7 +30,7 @@ set nocompatible
 " 編集に関する設定
 
 " IMEのオン/オフ
-set imdisable
+"set imdisable
 " ヤンクとクリップボードを共有
 set clipboard=unnamed,autoselect
 " タブ文字の画面上での幅
@@ -44,7 +44,7 @@ set autoindent
 " インデントの画面上での幅
 set shiftwidth=4
 " カーソルを行頭、行末で止まらないようにする
-set whichwrap=b,s,h,l,<,>,[,]
+" set whichwrap=b,s,h,l,<,>,[,]
 " バックスペースでインデントや改行を削除可能にする
 set backspace=indent,eol,start
 " 対応する括弧を表示する
@@ -120,6 +120,9 @@ imap ( ()<Left>
 imap [ []<Left>
 imap { {}<Left>
 nnoremap Y y$
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
 
 "---------------------------------------------------------------------------
 " Neobundle に関する設定
@@ -149,7 +152,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
     NeoBundle 'kannokanno/previm'
     NeoBundle 'tyru/open-browser.vim'
 
-    NeoBundle 'scrooloose/nerdtree'
+"    NeoBundle 'scrooloose/nerdtree'
 call neobundle#end()
 
 NeoBundleCheck
@@ -199,13 +202,13 @@ let g:previm_open_cmd = 'open -a Google\ Chrome'
 " NERDTree に関する設定
 
 " 隠しファイルを表示する
-let NERDTreeShowHidden = 1
+" let NERDTreeShowHidden = 1
 " ファイル指定で開かれた場合はNERDTreeは表示しない
-if !argc()
-  autocmd vimenter * NERDTree|normal gg3j
-endif
+" if !argc()
+"   autocmd vimenter * NERDTree|normal gg3j
+" endif
 "他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 "---------------------------------------------------------------------------
 " vim-indent-guides の設定
