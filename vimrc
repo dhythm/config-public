@@ -107,6 +107,8 @@ set writebackup
 set noswapfile
 " Undo情報の保存ファイルを作成しない
 set noundofile
+" バッファリスト移動時に保存を強制しない
+set hidden
 
 " 新しいウィンドウを開く方向
 set splitbelow
