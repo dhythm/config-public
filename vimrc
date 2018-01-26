@@ -1,5 +1,4 @@
 "---------------------------------------------------------------------------
-" Last Change:  2018/01/22
 " Maintainer:   Yura Okada
 "---------------------------------------------------------------------------
 scriptencoding utf-8
@@ -121,6 +120,10 @@ imap [ []<Left>
 imap { {}<Left>
 nnoremap Y y$
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
@@ -207,7 +210,7 @@ let g:previm_open_cmd = 'open -a Google\ Chrome'
 " if !argc()
 "   autocmd vimenter * NERDTree|normal gg3j
 " endif
-"他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
+" 他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 "---------------------------------------------------------------------------
