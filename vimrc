@@ -201,7 +201,9 @@ let g:neocomplcache_min_syntax_length = 3
 " Markdown に関する設定
 
 au BufRead,BufNewFile *.md set filetype=markdown
-let g:previm_open_cmd = 'open -a Google\ Chrome'
+if has('mac')
+  let g:previm_open_cmd = 'open -a Google\ Chrome'
+endif
 
 "---------------------------------------------------------------------------
 " NERDTree に関する設定
