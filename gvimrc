@@ -177,11 +177,14 @@ endif
 " Copyright (C) 2009-2016 KaoriYa/MURAOKA Taro
 
 "---------------------------------------------------------------------------
-" Last Change:  2017/12/30
-" Maintainer:   Yura Okada
+" Maintainer:   Yuta Okada
 "---------------------------------------------------------------------------
 
 "---------------------------------------------------------------------------
 " 画面表示に関する設定
 " 透過度を設定
-autocmd GUIEnter * set transparency=220
+if has('win32')
+  autocmd GUIEnter * set transparency=220
+elseif has('mac')
+  autocmd GUIEnter * set transparency=20
+endif
