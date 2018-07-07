@@ -1,0 +1,7 @@
+[
+    {
+        "key": "ctrl+m",
+        "command": "editor.action.insertLineAfter",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'"
+    }
+]
