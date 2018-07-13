@@ -45,7 +45,8 @@ PROMPT="%(?.%{${fg[green]}%}.%{${fg[red]}%})%n${reset_color}@${fg[blue]}%m${rese
 %# "
 
 # alias
-alias ls='ls -lhtrGF'
+# alias ls='ls -lhtrGF'
+alias ls='ls -lhGF'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
