@@ -27,12 +27,14 @@
     },
     {
         "key": "ctrl+m",
-        "command": "editor.action.insertLineAfter",
+        "command": "type",
+        "args": {"text": "\r\n"},
         "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'"
     },
     {
         "key": "ctrl+j",
-        "command": "editor.action.insertLineAfter",
+        "command": "type",
+        "args": {"text": "\n"},
         "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'"
     }
 ]
