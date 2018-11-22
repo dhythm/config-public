@@ -1,1 +1,5 @@
 #!/bin/bash
+
+###### Finder ######
+# show hidden files
+defaults write com.apple.finder AppleShowAllFiles -bool true
