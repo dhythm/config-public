@@ -3,3 +3,9 @@
 ###### Finder ######
 # show hidden files
 defaults write com.apple.finder AppleShowAllFiles -bool true
+
+###### Terminal ######
+# use only UTF-8
+defaults write com.apple.terminal StringEncodings -array 4
+# hide a prompt when the terminal is quited
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
