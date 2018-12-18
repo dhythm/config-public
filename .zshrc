@@ -14,10 +14,18 @@ export NVM_DIR="~/.nvm"
 #---------------------------------------------------------------------
 # パスの設定
 #---------------------------------------------------------------------
-export PATH="$PATH:$HOME/bin"
-export PATH="$PATH:$HOME/.pyenv/shims"
-export PATH="$PATH:/usr/local/Cellar/node/9.6.1/bin"
+export PYENV_ROOT="$HOME/.pyenv"
+
+export PATH=""
 export PATH="$PATH:./node_modules/.bin"
+export PATH="$PATH:$PYENV_ROOT/bin"
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:/usr/sbin"
+export PATH="$PATH:/usr/bin"
+export PATH="$PATH:/sbin"
+export PATH="$PATH:/bin"
+eval "$(pyenv init -)"
 
 #---------------------------------------------------------------------
 # UNIX の設定
