@@ -71,3 +71,5 @@ alias wallet2geth='/Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ W
 alias mvim='open -a /Applications/MacVim.app/Contents/MacOS/MacVim'
 # alias code='open -a /Applications/Visual\ Studio\ Code.app'
 alias simrec='xcrun simctl io booted recordVideo rec.mp4'
+alias simlist='xcrun simctl list'
+alias simkill='xcrun simctl erase all'
