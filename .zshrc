@@ -14,6 +14,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_DIR_FOREGROUND="white"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
