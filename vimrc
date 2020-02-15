@@ -129,6 +129,20 @@ nnoremap <silent> ]B :blast<CR>
 inoremap <silent> jj <ESC>
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+" Split window
+nmap Ss :split<Return><C-w>w
+nmap Sv :vsplit<Return><C-w>w
+nmap <Space> <C-w>w
+" Move window
+nmap Sh <C-w>h
+nmap Sk <C-w>k
+nmap Sj <C-w>j
+nmap Sl <C-w>l
+" Resize window
+nmap <C-w><left> <C-w><
+nmap <C-w><right> <C-w>>
+nmap <C-w><up> <C-w>+
+nmap <C-w><down> <C-w>-
 
 "---------------------------------------------------------------------------
 " Neobundle に関する設定
