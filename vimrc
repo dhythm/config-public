@@ -132,8 +132,8 @@ cnoremap <C-n> <Down>
 " Split window
 nmap Ss :split<Return><C-w>w
 nmap Sv :vsplit<Return><C-w>w
-nmap <Space> <C-w>w
 " Move window
+nmap <Space> <C-w>w
 nmap Sh <C-w>h
 nmap Sk <C-w>k
 nmap Sj <C-w>j
