@@ -3,4 +3,5 @@
 \cp -f vimrc /Applications/MacVim.app/Contents/Resources/vim/vimrc
 \cp -f gvimrc /Applications/MacVim.app/Contents/Resources/vim/gvimrc
 \cp -f .zshrc ~/.zshrc
+\cp -f .tmux.conf ~/.tmux.conf
 
