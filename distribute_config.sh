@@ -1,6 +1,6 @@
 #!/bin/bash
-cp vimrc ~/.vimrc
-cp vimrc /Applications/MacVim.app/Contents/Resources/vim/vimrc
-cp gvimrc /Applications/MacVim.app/Contents/Resources/vim/gvimrc
-cp .zshrc ~/.zshrc
+cp -f vimrc ~/.vimrc
+cp -f vimrc /Applications/MacVim.app/Contents/Resources/vim/vimrc
+cp -f gvimrc /Applications/MacVim.app/Contents/Resources/vim/gvimrc
+cp -f .zshrc ~/.zshrc
 
