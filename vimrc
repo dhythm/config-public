@@ -33,15 +33,15 @@ set nocompatible
 " ヤンクとクリップボードを共有
 set clipboard=unnamed,autoselect
 " タブ文字の画面上での幅
-set tabstop=4
+set tabstop=2
 " <Tab>キーを押下時に半角スペースを挿入
 set expandtab
 " <Tab>キー押下時に挿入される空白の量
-set softtabstop=4
+set softtabstop=2
 " 自動インデント設定
 set autoindent
 " インデントの画面上での幅
-set shiftwidth=4
+set shiftwidth=2
 " カーソルを行頭、行末で止まらないようにする
 " set whichwrap=b,s,h,l,<,>,[,]
 " バックスペースでインデントや改行を削除可能にする
@@ -96,6 +96,8 @@ syntax on
 colorscheme desert
 " 行番号の色
 highlight LineNr ctermfg=darkyellow
+
+autocmd BufNew,BufNewFile,BufRead *.py :set sts=4 sw=4 ts=4
 "---------------------------------------------------------------------------
 " ファイル操作に関する設定
 
@@ -146,6 +148,10 @@ nmap <C-w><down> <C-w>-
 " Move tab
 nnoremap <Tab> :Tabnext<Return>
 nnoremap <S-Tab> :Tabprev<Return>
+" Run vimfiler
+nmap Sf :VimFilerBufferDir<Return>
+nmap SF :VimFilerExplorer -find<Return>
+nmap Sb :Unite buffer<Return>
 
 "---------------------------------------------------------------------------
 " Neobundle に関する設定
@@ -174,6 +180,8 @@ call neobundle#begin(expand('~/.vim/bundle'))
     NeoBundle 'plasticboy/vim-markdown'
     NeoBundle 'kannokanno/previm'
     NeoBundle 'tyru/open-browser.vim'
+
+    NeoBundle 'Shougo/vimfiler'
 
 "    NeoBundle 'scrooloose/nerdtree'
 call neobundle#end()
@@ -214,7 +222,15 @@ let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_underbar_completion = 1
 " syntax の最小文字数を設定
 let g:neocomplcache_min_syntax_length = 3
-
+"---------------------------------------------------------------------------
+" Config for vimfiler
+let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_safe_mode_by_default = 0
+let g:vimfiler_enable_auto_cd = 0
+let g:vimfiler_tree_leaf_icon = ''
+let g:vimfiler_tree_opened_icon = '▾'
+let g:vimfiler_tree_closed_icon = '▸'
+let g:vimfiler_marked_file_icon = '✓'
 "---------------------------------------------------------------------------
 " Markdown に関する設定
 
