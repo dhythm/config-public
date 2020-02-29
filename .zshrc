@@ -112,6 +112,45 @@ alias mvim='open -a /Applications/MacVim.app/Contents/MacOS/MacVim'
 alias simrec='xcrun simctl io booted recordVideo rec.mp4'
 
 # ----------------------
+# Paths
+# ----------------------
+export NVM_DIR="~/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"]
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH=""
+export PATH="$PATH:./node_modules/.bin"
+export PATH="$PATH:$PYENV_ROOT/bin"
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:/usr/sbin"
+export PATH="$PATH:/usr/bin"
+export PATH="$PATH:/sbin"
+export PATH="$PATH:/bin"
+eval "$(pyenv init -)"
+
+# ----------------------
+# Config for UNIX
+# ----------------------
+# prevent log-out by Ctrl-D
+setopt IGNOREEOF
+# Japanese configuration
+export LANG=ja_JP.UTF-8
+# Color
+autoload -Uz colors
+colors
+export LSCOLORS=gxfxcxdxbxegedabagacag
+export LS_COLORS='di=36;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;46'
+# Complement
+autoload -Uz compinit
+compinit
+# History
+setopt share_history
+setopt histignorealldups
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+# ----------------------
 # Git Aliases
 # ----------------------
 alias ga='git add'
