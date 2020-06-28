@@ -121,6 +121,7 @@ export NODE_PATH=`npm root -g`
 export PATH=""
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:$PYENV_ROOT/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:/usr/local/Cellar/node/9.6.1/bin"
 export PATH="$PATH:/usr/local/bin"
