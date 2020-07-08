@@ -1,7 +1,7 @@
 #!/bin/bash
-\cp -f vimrc ~/.vimrc
-\cp -f vimrc /Applications/MacVim.app/Contents/Resources/vim/
-\cp -f gvimrc /Applications/MacVim.app/Contents/Resources/vim/
+\cp -f .vimrc ~/.vimrc
+\cp -f .vimrc.gui /Applications/MacVim.app/Contents/Resources/vim/
+\cp -f .gvimrc /Applications/MacVim.app/Contents/Resources/vim/
 \cp -f .zshrc ~/
 \cp -f .tmux.conf ~/
 
