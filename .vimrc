@@ -254,7 +254,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_id") | NERDTree | endif
 "   autocmd vimenter * NERDTree|normal gg3j
 " endif
 " 他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 "---------------------------------------------------------------------------
 " vim-indent-guides の設定
