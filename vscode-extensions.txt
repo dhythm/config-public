@@ -1,46 +1,56 @@
-AlanWalk.markdown-toc
-alexcvzz.vscode-sqlite
-aws-scripting-guy.cform
-be5invis.vscode-custom-css
-christian-kohler.path-intellisense
-chrmarti.regex
-CoenraadS.bracket-pair-colorizer
-dbaeumer.vscode-eslint
-donjayamanne.githistory
-dsznajder.es7-react-js-snippets
-eamodio.gitlens
-eg2.tslint
-esbenp.prettier-vscode
-formulahendry.auto-rename-tag
-gerane.Theme-Dracula
-ICS.japanese-proofreading
-ionutvmi.path-autocomplete
-jpoissonnier.vscode-styled-components-fork
-kamikillerto.vscode-colorize
-kumar-harsh.graphql-for-vscode
-letmaik.git-tree-compare
-MariusAlchimavicius.json-to-ts
-mechatroner.rainbow-csv
-mquandalle.graphql
-MS-CEINTL.vscode-language-pack-ja
-ms-python.python
-ms-vscode.vscode-typescript-tslint-plugin
-msjsdiag.debugger-for-chrome
-mtsmfm.graphql-lsc
-oderwat.indent-rainbow
-Orta.vscode-jest
-pflannery.vscode-versionlens
-PKief.material-icon-theme
-redhat.vscode-yaml
-ritwickdey.LiveServer
-ryu1kn.partial-diff
-shardulm94.trailing-spaces
-shd101wyy.markdown-preview-enhanced
-spook.easysass
-streetsidesoftware.code-spell-checker
-vincaslt.highlight-matching-tag
-vscode-icons-team.vscode-icons
-vscodevim.vim
-WallabyJs.quokka-vscode
-xyz.local-history
-yzane.markdown-pdf
+code --list-extensions | xargs -L 1 echo code --install-extension
+
+code --install-extension AlanWalk.markdown-toc
+code --install-extension alexcvzz.vscode-sqlite
+code --install-extension Angular.ng-template
+code --install-extension aws-scripting-guy.cform
+code --install-extension be5invis.vscode-custom-css
+code --install-extension christian-kohler.path-intellisense
+code --install-extension chrmarti.regex
+code --install-extension CoenraadS.bracket-pair-colorizer
+code --install-extension dariofuzinato.vue-peek
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension donjayamanne.githistory
+code --install-extension dsznajder.es7-react-js-snippets
+code --install-extension eamodio.gitlens
+code --install-extension eg2.tslint
+code --install-extension esbenp.prettier-vscode
+code --install-extension formulahendry.auto-close-tag
+code --install-extension formulahendry.auto-rename-tag
+code --install-extension gerane.Theme-Dracula
+code --install-extension HookyQR.beautify
+code --install-extension ICS.japanese-proofreading
+code --install-extension ionutvmi.path-autocomplete
+code --install-extension jcbuisson.vue
+code --install-extension jpoissonnier.vscode-styled-components-fork
+code --install-extension kamikillerto.vscode-colorize
+code --install-extension kumar-harsh.graphql-for-vscode
+code --install-extension letmaik.git-tree-compare
+code --install-extension MariusAlchimavicius.json-to-ts
+code --install-extension marp-team.marp-vscode
+code --install-extension mechatroner.rainbow-csv
+code --install-extension mquandalle.graphql
+code --install-extension MS-CEINTL.vscode-language-pack-ja
+code --install-extension ms-python.python
+code --install-extension ms-vscode.vscode-typescript-tslint-plugin
+code --install-extension msjsdiag.debugger-for-chrome
+code --install-extension mtsmfm.graphql-lsc
+code --install-extension octref.vetur
+code --install-extension oderwat.indent-rainbow
+code --install-extension Orta.vscode-jest
+code --install-extension PKief.material-icon-theme
+code --install-extension redhat.vscode-yaml
+code --install-extension ritwickdey.LiveServer
+code --install-extension RomanPeshkov.vscode-text-tables
+code --install-extension rust-lang.rust
+code --install-extension ryu1kn.partial-diff
+code --install-extension shardulm94.trailing-spaces
+code --install-extension shd101wyy.markdown-preview-enhanced
+code --install-extension spook.easysass
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension vincaslt.highlight-matching-tag
+code --install-extension vscode-icons-team.vscode-icons
+code --install-extension vscodevim.vim
+code --install-extension WallabyJs.quokka-vscode
+code --install-extension xyz.local-history
+code --install-extension yzane.markdown-pdf
