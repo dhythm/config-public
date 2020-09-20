@@ -89,7 +89,7 @@ endif
 " ウインドウに関する設定:
 "
 " ウインドウの幅
-set columns=100
+set columns=80
 " ウインドウの高さ
 set lines=50
 " コマンドラインの高さ(GUI使用時)

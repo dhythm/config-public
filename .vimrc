@@ -246,7 +246,7 @@ endif
 
 " let g:NERDTreeDirAllowExpandable = '>'
 " let g:NERDTreeDirAllowCollapsible = 'v'
-autocmd VimEnter * if argc() == 0 && !exists("s:std_id") | NERDTree | endif
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_id") | NERDTree | endif
 " 隠しファイルを表示する
 " let NERDTreeShowHidden = 1
 " ファイル指定で開かれた場合はNERDTreeは表示しない
@@ -255,7 +255,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_id") | NERDTree | endif
 " endif
 " 他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "---------------------------------------------------------------------------
 " vim-indent-guides の設定

@@ -245,13 +245,13 @@ endif
 " 隠しファイルを表示する
 " let NERDTreeShowHidden = 1
 " ファイル指定で開かれた場合はNERDTreeは表示しない
-autocmd vimenter * if !argc() | NERDTree | endif
+" autocmd vimenter * if !argc() | NERDTree | endif
 " if !argc()
 "   autocmd vimenter * NERDTree|normal gg3j
 " endif
 " 他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "---------------------------------------------------------------------------
 " vim-indent-guides の設定
