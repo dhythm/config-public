@@ -165,7 +165,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
     NeoBundleFetch 'Shougo/neobundle.vim'
 
     NeoBundle 'Shougo/unite.vim'
-    NeoBundle 'Shougo/neomru.vim'
+"    NeoBundle 'Shougo/neomru.vim'
 
     NeoBundle 'Shougo/neocomplcache'
     NeoBundle 'Shougo/neosnippet'
@@ -183,11 +183,11 @@ call neobundle#begin(expand('~/.vim/bundle'))
 
     NeoBundle 'Shougo/vimfiler'
 
-    NeoBundle 'scrooloose/nerdtree'
+    " NeoBundle 'scrooloose/nerdtree'
     NeoBundle 'vim-airline/vim-airline'
     NeoBundle 'vim-airline/vim-airline-themes'
 call neobundle#end()
-
+" 
 NeoBundleCheck
 
 "---------------------------------------------------------------------------
@@ -267,3 +267,4 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 filetype plugin indent on
 "---------------------------------------------------------------------------
+
