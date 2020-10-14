@@ -77,6 +77,7 @@ POWERLEVEL9K_DIR_FOREGROUND="white"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # User configuration
 
@@ -116,15 +117,11 @@ alias simrec='xcrun simctl io booted recordVideo rec.mp4'
 # ----------------------
 export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"]
-export NODE_PATH=`npm root -g`
 export PATH=""
 export PATH="$PATH:./node_modules/.bin"
-export PATH="$PATH:$PYENV_ROOT/bin"
-export PATH="$PATH:$HOME/.anyenv/bin:"
-export PATH="$PATH:$HOME/.pyenv/bin"
+export PATH="$PATH:$HOME/.anyenv/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/bin"
-export PATH="$PATH:/usr/local/Cellar/node/9.6.1/bin"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/usr/sbin"
 export PATH="$PATH:/usr/bin"
