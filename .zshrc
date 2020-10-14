@@ -131,6 +131,7 @@ export PATH="$PATH:/usr/bin"
 export PATH="$PATH:/sbin"
 export PATH="$PATH:/bin"
 export PATH="$PATH:`npm bin -g`"
+eval "$(anyenv init -)"
 eval "$(pyenv init -)"
 
 # ----------------------
