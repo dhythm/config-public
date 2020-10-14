@@ -77,7 +77,6 @@ POWERLEVEL9K_DIR_FOREGROUND="white"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # User configuration
 
@@ -127,7 +126,7 @@ export PATH="$PATH:/usr/sbin"
 export PATH="$PATH:/usr/bin"
 export PATH="$PATH:/sbin"
 export PATH="$PATH:/bin"
-export PATH="$PATH:`npm bin -g`"
+# export PATH="$PATH:`npm bin -g`"
 eval "$(anyenv init -)"
 eval "$(pyenv init -)"
 
