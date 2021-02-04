@@ -45,7 +45,7 @@ code --install-extension stylelint.vscode-stylelint
 code --install-extension vincaslt.highlight-matching-tag
 code --install-extension vscode-icons-team.vscode-icons
 code --install-extension vscodevim.vim
-code --install-extension WallabyJs.quokka-vscode
+# code --install-extension WallabyJs.quokka-vscode
 code --install-extension wayou.vscode-todo-highlight
 code --install-extension Wscats.eno
 code --install-extension yzane.markdown-pdf
