@@ -9,7 +9,7 @@ code --install-extension dariofuzinato.vue-peek
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension donjayamanne.githistory
 code --install-extension dracula-theme.theme-dracula
-code --install-extension dsznajder.es7-react-js-snippets
+# code --install-extension dsznajder.es7-react-js-snippets
 code --install-extension eamodio.gitlens
 code --install-extension esbenp.prettier-vscode
 code --install-extension formulahendry.auto-close-tag
