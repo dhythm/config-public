@@ -78,8 +78,12 @@ if has('win32')
   if has('kaoriya')
     set ambiwidth=auto
   endif
+elseif has('gui_macvim')
+  set guifont=Osaka-Mono:h14
 elseif has('mac')
-  set guifont=Osaka－等幅:h14
+  set guifont=Andale\ Mono:h14
+  set guifontwide=ヒラギノ角ゴ\ StdN\ W8:h14
+  " set guifont=Osaka－等幅:h14
 elseif has('xfontset')
   " UNIX用 (xfontsetを使用)
   set guifontset=a14,r14,k14
