@@ -38,5 +38,26 @@
   "editor.formatOnType": true,
   "prettier.disableLanguages": ["markdown"],
   "workbench.iconTheme": "material-icon-theme",
-  "eslint.alwaysShowStatus": true
+  "eslint.alwaysShowStatus": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascript",
+    "javascriptreact",
+    // "typescript",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (Eex)"
+  ],
+  "auto-close-tag.disableOnLanguage": []
 }
