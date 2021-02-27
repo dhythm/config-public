@@ -6,16 +6,19 @@ code --install-extension christian-kohler.path-intellisense
 code --install-extension chrmarti.regex
 code --install-extension CoenraadS.bracket-pair-colorizer
 code --install-extension dariofuzinato.vue-peek
+code --install-extension Dart-Code.dart-code
+code --install-extension Dart-Code.flutter
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension donjayamanne.githistory
 code --install-extension dracula-theme.theme-dracula
 # code --install-extension dsznajder.es7-react-js-snippets
 code --install-extension eamodio.gitlens
 code --install-extension esbenp.prettier-vscode
-code --install-extension formulahendry.auto-close-tag
+code --install-extension firsttris.vscode-jest-runner
+# code --install-extension formulahendry.auto-close-tag
 code --install-extension formulahendry.auto-rename-tag
 code --install-extension GraphQL.vscode-graphql
-code --install-extension HookyQR.beautify
+# code --install-extension HookyQR.beautify
 code --install-extension ICS.japanese-proofreading
 code --install-extension ionutvmi.path-autocomplete
 code --install-extension jcbuisson.vue
@@ -25,8 +28,11 @@ code --install-extension kumar-harsh.graphql-for-vscode
 code --install-extension letmaik.git-tree-compare
 code --install-extension MariusAlchimavicius.json-to-ts
 code --install-extension marp-team.marp-vscode
+code --install-extension ms-azuretools.vscode-docker
 code --install-extension MS-CEINTL.vscode-language-pack-ja
 code --install-extension ms-python.python
+code --install-extension ms-toolsai.jupyter
+code --install-extension ms-vscode-remote.remote-containers
 code --install-extension msjsdiag.debugger-for-chrome
 code --install-extension octref.vetur
 code --install-extension oderwat.indent-rainbow
@@ -47,5 +53,6 @@ code --install-extension vscode-icons-team.vscode-icons
 code --install-extension vscodevim.vim
 # code --install-extension WallabyJs.quokka-vscode
 code --install-extension wayou.vscode-todo-highlight
-code --install-extension Wscats.eno
+# code --install-extension Wscats.eno
 code --install-extension yzane.markdown-pdf
+
