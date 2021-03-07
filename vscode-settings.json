@@ -59,5 +59,17 @@
     "cfml",
     "HTML (Eex)"
   ],
-  "auto-close-tag.disableOnLanguage": []
+  "auto-close-tag.disableOnLanguage": [],
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  }
 }
