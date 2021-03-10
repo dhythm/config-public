@@ -71,5 +71,10 @@
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false
-  }
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  // "emmet.triggerExpansionOnTab": true,
+  // "emmet.showExpandedAbbreviation": "never",
+  "emmet.showSuggestionsAsSnippets": true,
+  "editor.snippetSuggestions": "bottom"
 }
