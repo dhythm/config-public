@@ -2,6 +2,7 @@ code --list-extensions | xargs -L 1 echo code --install-extension
 
 code --install-extension 42Crunch.vscode-openapi
 code --install-extension Angular.ng-template
+code --install-extension antonholmberg.remove-bg
 code --install-extension Arjun.swagger-viewer
 code --install-extension be5invis.vscode-custom-css
 code --install-extension christian-kohler.path-intellisense
