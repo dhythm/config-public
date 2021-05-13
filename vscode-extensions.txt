@@ -24,6 +24,7 @@ code --install-extension formulahendry.auto-rename-tag
 code --install-extension foxundermoon.next-js
 code --install-extension GraphQL.vscode-graphql
 code --install-extension Gruntfuggly.todo-tree
+code --install-extension hediet.vscode-drawio
 # code --install-extension HookyQR.beautify
 code --install-extension ICS.japanese-proofreading
 code --install-extension ionutvmi.path-autocomplete
