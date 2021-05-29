@@ -129,7 +129,8 @@ export PATH="$PATH:/bin"
 # export PATH="$PATH:`npm bin -g`"
 
 eval "$(anyenv init -)"
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
+eval "$(pyenv init --path)
 eval "$(rbenv init -)"
 export PATH="$PATH:$HOME/local/bin/flutter/bin"
 
