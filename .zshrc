@@ -128,6 +128,13 @@ export PATH="$PATH:/sbin"
 export PATH="$PATH:/bin"
 # export PATH="$PATH:`npm bin -g`"
 
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 eval "$(anyenv init -)"
 # eval "$(pyenv init -)"
 eval "$(pyenv init --path)
