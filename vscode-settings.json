@@ -24,7 +24,6 @@
     "android": true,
     "ios": true
   },
-  "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.renderWhitespace": "boundary",
   "editor.rulers": [80],
   "editor.codeActionsOnSave": {
@@ -61,6 +60,8 @@
   ],
   "auto-close-tag.disableOnLanguage": [],
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "python.formatting.provider": "black",
+  "python.linting.mypyEnabled": true,
   "[dart]": {
     "editor.defaultFormatter": "Dart-Code.dart-code",
     "editor.formatOnSave": true,
@@ -76,5 +77,15 @@
   // "emmet.triggerExpansionOnTab": true,
   // "emmet.showExpandedAbbreviation": "never",
   "emmet.showSuggestionsAsSnippets": true,
-  "editor.snippetSuggestions": "bottom"
+  "editor.snippetSuggestions": "bottom",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  }
 }
