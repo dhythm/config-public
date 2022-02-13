@@ -30,6 +30,7 @@ code --install-extension ICS.japanese-proofreading
 code --install-extension ionutvmi.path-autocomplete
 code --install-extension jcbuisson.vue
 code --install-extension jpoissonnier.vscode-styled-components
+code --install-extension jtr.vscode-position
 code --install-extension kamikillerto.vscode-colorize
 code --install-extension kumar-harsh.graphql-for-vscode
 code --install-extension letmaik.git-tree-compare
@@ -38,7 +39,10 @@ code --install-extension marp-team.marp-vscode
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension MS-CEINTL.vscode-language-pack-ja
 code --install-extension ms-python.python
+code --install-extension ms-python.vscode-pylance
 code --install-extension ms-toolsai.jupyter
+code --install-extension ms-toolsai.jupyter-keymap
+code --install-extension ms-toolsai.jupyter-renderers
 code --install-extension ms-vscode-remote.remote-containers
 code --install-extension msjsdiag.debugger-for-chrome
 code --install-extension octref.vetur
@@ -61,7 +65,6 @@ code --install-extension vscode-icons-team.vscode-icons
 code --install-extension vscodevim.vim
 # code --install-extension WallabyJs.quokka-vscode
 code --install-extension wayou.vscode-todo-highlight
-code --install-extension wix.vscode-import-cost
 # code --install-extension Wscats.eno
 code --install-extension yzane.markdown-pdf
 code --install-extension yzhang.markdown-all-in-one
