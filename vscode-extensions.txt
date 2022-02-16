@@ -36,6 +36,7 @@ code --install-extension kumar-harsh.graphql-for-vscode
 code --install-extension letmaik.git-tree-compare
 code --install-extension MariusAlchimavicius.json-to-ts
 code --install-extension marp-team.marp-vscode
+code --install-extension matklad.rust-analyzer
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension MS-CEINTL.vscode-language-pack-ja
 code --install-extension ms-python.python
@@ -53,7 +54,7 @@ code --install-extension PKief.material-icon-theme
 code --install-extension redhat.vscode-yaml
 code --install-extension ritwickdey.LiveServer
 code --install-extension RomanPeshkov.vscode-text-tables
-code --install-extension rust-lang.rust
+# code --install-extension rust-lang.rust
 code --install-extension ryu1kn.partial-diff
 code --install-extension shardulm94.trailing-spaces
 code --install-extension shd101wyy.markdown-preview-enhanced
