@@ -87,5 +87,8 @@
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
-  }
+  },
+  "redhat.telemetry.enabled": true,
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "deno.path": "/Users/y-okada/.deno/bin/deno"
 }
