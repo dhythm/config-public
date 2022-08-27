@@ -39,6 +39,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "eslint.alwaysShowStatus": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.referencesCodeLens.enabled": true,
   "auto-close-tag.activationOnLanguage": [
     "xml",
     "php",
