@@ -76,8 +76,8 @@
   },
   "diffEditor.ignoreTrimWhitespace": false,
   // "emmet.triggerExpansionOnTab": true,
-  // "emmet.showExpandedAbbreviation": "never",
-  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.showExpandedAbbreviation": "never",
+  // "emmet.showSuggestionsAsSnippets": true,
   "editor.snippetSuggestions": "bottom",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
