@@ -4,28 +4,28 @@ code --install-extension 42Crunch.vscode-openapi
 code --install-extension Angular.ng-template
 code --install-extension antonholmberg.remove-bg
 code --install-extension Arjun.swagger-viewer
+code --install-extension astro-build.astro-vscode
 code --install-extension be5invis.vscode-custom-css
 code --install-extension ChakrounAnas.turbo-console-log
 code --install-extension christian-kohler.path-intellisense
 code --install-extension chrmarti.regex
-code --install-extension CoenraadS.bracket-pair-colorizer
 code --install-extension dariofuzinato.vue-peek
 code --install-extension Dart-Code.dart-code
 code --install-extension Dart-Code.flutter
 code --install-extension dbaeumer.vscode-eslint
+code --install-extension denoland.vscode-deno
 code --install-extension donjayamanne.githistory
 code --install-extension dracula-theme.theme-dracula
-# code --install-extension dsznajder.es7-react-js-snippets
 code --install-extension eamodio.gitlens
+code --install-extension EditorConfig.EditorConfig
 code --install-extension esbenp.prettier-vscode
 code --install-extension firsttris.vscode-jest-runner
-# code --install-extension formulahendry.auto-close-tag
 code --install-extension formulahendry.auto-rename-tag
 code --install-extension foxundermoon.next-js
 code --install-extension GraphQL.vscode-graphql
-code --install-extension Gruntfuggly.todo-tree
+code --install-extension GraphQL.vscode-graphql-execution
+code --install-extension GraphQL.vscode-graphql-syntax
 code --install-extension hediet.vscode-drawio
-# code --install-extension HookyQR.beautify
 code --install-extension ICS.japanese-proofreading
 code --install-extension ionutvmi.path-autocomplete
 code --install-extension jcbuisson.vue
@@ -34,39 +34,36 @@ code --install-extension jtr.vscode-position
 code --install-extension kamikillerto.vscode-colorize
 code --install-extension kumar-harsh.graphql-for-vscode
 code --install-extension letmaik.git-tree-compare
-code --install-extension MariusAlchimavicius.json-to-ts
 code --install-extension marp-team.marp-vscode
-code --install-extension matklad.rust-analyzer
+code --install-extension mgmcdermott.vscode-language-babel
+code --install-extension mikestead.dotenv
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension MS-CEINTL.vscode-language-pack-ja
+code --install-extension ms-playwright.playwright
 code --install-extension ms-python.python
 code --install-extension ms-python.vscode-pylance
-code --install-extension ms-toolsai.jupyter
-code --install-extension ms-toolsai.jupyter-keymap
-code --install-extension ms-toolsai.jupyter-renderers
 code --install-extension ms-vscode-remote.remote-containers
-code --install-extension msjsdiag.debugger-for-chrome
 code --install-extension octref.vetur
 code --install-extension oderwat.indent-rainbow
+code --install-extension OfHumanBondage.react-proptypes-intellisense
 code --install-extension Orta.vscode-jest
+code --install-extension patricklee.vsnotes
 code --install-extension pflannery.vscode-versionlens
 code --install-extension PKief.material-icon-theme
+code --install-extension Prisma.prisma
 code --install-extension redhat.vscode-yaml
 code --install-extension ritwickdey.LiveServer
-code --install-extension RomanPeshkov.vscode-text-tables
-# code --install-extension rust-lang.rust
-code --install-extension ryu1kn.partial-diff
+code --install-extension rust-lang.rust-analyzer
 code --install-extension shardulm94.trailing-spaces
 code --install-extension shd101wyy.markdown-preview-enhanced
 code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension stylelint.vscode-stylelint
 code --install-extension vincaslt.highlight-matching-tag
+code --install-extension VisualStudioExptTeam.intellicode-api-usage-examples
 code --install-extension VisualStudioExptTeam.vscodeintellicode
 code --install-extension vscode-icons-team.vscode-icons
 code --install-extension vscodevim.vim
-# code --install-extension WallabyJs.quokka-vscode
 code --install-extension wayou.vscode-todo-highlight
-# code --install-extension Wscats.eno
+code --install-extension wix.vscode-import-cost
 code --install-extension yzane.markdown-pdf
 code --install-extension yzhang.markdown-all-in-one
-code --install-extension zenclabs.reactpreview
