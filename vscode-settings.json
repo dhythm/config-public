@@ -1,6 +1,5 @@
 {
   "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
-  "terminal.integrated.shell.osx": "/bin/zsh",
   // @Drakal added
   // I'd also consider adjusting line height if icons are cut off on top too or things look super cramped.
   // "terminal.integrated.lineHeight": 1.3
@@ -35,31 +34,10 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.formatOnType": true,
-  "prettier.disableLanguages": ["markdown"],
   "workbench.iconTheme": "material-icon-theme",
   "eslint.alwaysShowStatus": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.referencesCodeLens.enabled": true,
-  "auto-close-tag.activationOnLanguage": [
-    "xml",
-    "php",
-    "blade",
-    "ejs",
-    "jinja",
-    "javascript",
-    "javascriptreact",
-    // "typescript",
-    "typescriptreact",
-    "plaintext",
-    "markdown",
-    "vue",
-    "liquid",
-    "erb",
-    "lang-cfml",
-    "cfml",
-    "HTML (Eex)"
-  ],
-  "auto-close-tag.disableOnLanguage": [],
   "javascript.updateImportsOnFileMove.enabled": "always",
   "python.formatting.provider": "black",
   "python.linting.mypyEnabled": true,
@@ -94,7 +72,8 @@
     "editor.defaultFormatter": "Prisma.prisma"
   },
   "jest.autoRun": "off",
-  "rust-analyzer.checkOnSave.command": "clippy"
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "japanese-proofreading.textlint.全角文字と半角文字の間": false
   // "deno.enable": true,
   // "deno.lint": true,
   // "deno.unstable": false,
