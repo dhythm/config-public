@@ -5,6 +5,7 @@ code --install-extension Angular.ng-template
 code --install-extension antonholmberg.remove-bg
 code --install-extension Arjun.swagger-viewer
 code --install-extension astro-build.astro-vscode
+code --install-extension asvetliakov.vscode-neovim
 code --install-extension be5invis.vscode-custom-css
 code --install-extension ChakrounAnas.turbo-console-log
 code --install-extension christian-kohler.path-intellisense
