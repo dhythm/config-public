@@ -73,7 +73,9 @@
   },
   "jest.autoRun": "off",
   "rust-analyzer.checkOnSave.command": "clippy",
-  "japanese-proofreading.textlint.全角文字と半角文字の間": false
+  "japanese-proofreading.textlint.全角文字と半角文字の間": false,
+  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+  "editor.scrollBeyondLastLine": false
   // "deno.enable": true,
   // "deno.lint": true,
   // "deno.unstable": false,
