@@ -1,5 +1,56 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
+  {
+    "key": "ctrl+p",
+    "command": "cursorUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "cursorDown",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "cursorRight",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "cursorLeft",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "cursorHome",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "cursorEnd",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "deleteRight",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "deleteLeft",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "deleteAllRight",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "type",
+    "args": { "text": "\n" },
+    "when": "terminalFocus"
+  },
     {
         "key": "ctrl+s ctrl+w",
         "command": "workbench.action.terminal.focusNextPane",
