@@ -188,6 +188,25 @@ lvim.lsp.installer.setup.automatic_installation = true
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   {
+    command = "stylelint",
+    filetypes = {
+      "scss",
+      "less",
+      "css",
+      "sass"
+    },
+    args = { "--fix", "--stdin" }
+  },
+  {
+    command = "eslint_d",
+    filetypes = {
+      "javascriptreact",
+      "javascript",
+      "typescriptreact",
+      "typescript",
+    },
+  },
+  {
     command = "prettier",
     filetypes = {
       "javascript",
@@ -200,15 +219,6 @@ formatters.setup {
       "yaml",
       "markdown",
       "graphql"
-    },
-  },
-  {
-    command = "eslint_d",
-    filetypes = {
-      "javascriptreact",
-      "javascript",
-      "typescriptreact",
-      "typescript",
     },
   },
   {
