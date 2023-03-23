@@ -261,3 +261,5 @@ code_actions.setup {
     },
   },
 }
+
+lvim.builtin.cmp.formatting.duplicates["nvim_lsp"] = 1
