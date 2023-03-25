@@ -67,7 +67,9 @@ set nocompatible
 " 編集に関する設定
 
 " IMEのオン/オフ
-"set imdisable
+" set imdisable
+set noimdisable
+set iminsert=2
 " ヤンクとクリップボードを共有
 " set clipboard=unnamed,autoselect
 " タブ文字の画面上での幅
