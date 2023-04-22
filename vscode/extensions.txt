@@ -30,7 +30,6 @@ code --install-extension hediet.vscode-drawio
 code --install-extension ICS.japanese-proofreading
 code --install-extension ionutvmi.path-autocomplete
 code --install-extension jcbuisson.vue
-code --install-extension jpoissonnier.vscode-styled-components
 code --install-extension jtr.vscode-position
 code --install-extension kamikillerto.vscode-colorize
 code --install-extension kumar-harsh.graphql-for-vscode
@@ -41,8 +40,14 @@ code --install-extension mikestead.dotenv
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension MS-CEINTL.vscode-language-pack-ja
 code --install-extension ms-playwright.playwright
+code --install-extension ms-python.isort
 code --install-extension ms-python.python
 code --install-extension ms-python.vscode-pylance
+code --install-extension ms-toolsai.jupyter
+code --install-extension ms-toolsai.jupyter-keymap
+code --install-extension ms-toolsai.jupyter-renderers
+code --install-extension ms-toolsai.vscode-jupyter-cell-tags
+code --install-extension ms-toolsai.vscode-jupyter-slideshow
 code --install-extension ms-vscode-remote.remote-containers
 code --install-extension octref.vetur
 code --install-extension oderwat.indent-rainbow
@@ -51,6 +56,7 @@ code --install-extension Orta.vscode-jest
 code --install-extension patricklee.vsnotes
 code --install-extension pflannery.vscode-versionlens
 code --install-extension PKief.material-icon-theme
+code --install-extension pnp.polacode
 code --install-extension Prisma.prisma
 code --install-extension redhat.vscode-yaml
 code --install-extension ritwickdey.LiveServer
