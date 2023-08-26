@@ -182,6 +182,9 @@ alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gsts='git stash save'
 
+bindkey "^P" up-line-or-search
+bindkey "^N" down-line-or-search
+
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 # poetry / LunarVim
