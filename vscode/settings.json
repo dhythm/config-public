@@ -85,6 +85,8 @@
   "japanese-proofreading.textlint.全角文字と半角文字の間": false,
   "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
   "editor.scrollBeyondLastLine": false
+  "typescript.preferGoToSourceDefinition": true,
+  "javascript.preferGoToSourceDefinition": true
   // "deno.enable": true,
   // "deno.lint": true,
   // "deno.unstable": false,
