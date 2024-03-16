@@ -86,6 +86,7 @@
   "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
   "editor.scrollBeyondLastLine": false
   "typescript.preferGoToSourceDefinition": true,
+  "typescriptreact.preferGoToSourceDefinition": true,
   "javascript.preferGoToSourceDefinition": true
   // "deno.enable": true,
   // "deno.lint": true,
