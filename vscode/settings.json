@@ -91,4 +91,15 @@
   // "deno.enable": true,
   // "deno.lint": true,
   // "deno.unstable": false,
+  "i18n-ally.annotationInPlace": false,
+  "i18n-ally.editor.preferEditor": true,
+  "i18n-ally.enabledFrameworks": [
+    "react-i18next"
+  ],
+  "i18n-ally.keystyle": "flat",
+  "i18n-ally.localesPaths": [
+    "src/i18n/locales"
+  ],
+  "i18n-ally.pathMatcher": "{locale}/general_translation.json",
+  "i18n-ally.sourceLanguage": "ja"
 }
