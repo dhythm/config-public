@@ -37,6 +37,7 @@ code --install-extension jtr.vscode-position
 code --install-extension kamikillerto.vscode-colorize
 code --install-extension kumar-harsh.graphql-for-vscode
 code --install-extension letmaik.git-tree-compare
+code --install-extension lokalise.i18n-ally
 code --install-extension marp-team.marp-vscode
 code --install-extension mgmcdermott.vscode-language-babel
 code --install-extension mikestead.dotenv
