@@ -1,6 +1,7 @@
 code --list-extensions | xargs -L 1 echo code --install-extension
 
 code --install-extension 42crunch.vscode-openapi
+code --install-extension alexcvzz.vscode-sqlite
 code --install-extension angular.ng-template
 code --install-extension antonholmberg.remove-bg
 code --install-extension arjun.swagger-viewer
@@ -20,7 +21,6 @@ code --install-extension dracula-theme.theme-dracula
 code --install-extension eamodio.gitlens
 code --install-extension editorconfig.editorconfig
 code --install-extension esbenp.prettier-vscode
-code --install-extension figma.figma-vscode-extension
 code --install-extension firsttris.vscode-jest-runner
 code --install-extension formulahendry.auto-rename-tag
 code --install-extension foxundermoon.next-js
@@ -35,15 +35,18 @@ code --install-extension ionutvmi.path-autocomplete
 code --install-extension jcbuisson.vue
 code --install-extension jtr.vscode-position
 code --install-extension kamikillerto.vscode-colorize
+code --install-extension kimuson.ts-type-expand
 code --install-extension kumar-harsh.graphql-for-vscode
 code --install-extension letmaik.git-tree-compare
 code --install-extension lokalise.i18n-ally
 code --install-extension marp-team.marp-vscode
 code --install-extension mgmcdermott.vscode-language-babel
 code --install-extension mikestead.dotenv
+code --install-extension mikoz.autoflake-extension
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-ceintl.vscode-language-pack-ja
 code --install-extension ms-playwright.playwright
+code --install-extension ms-python.black-formatter
 code --install-extension ms-python.debugpy
 code --install-extension ms-python.isort
 code --install-extension ms-python.python
@@ -54,6 +57,7 @@ code --install-extension ms-toolsai.jupyter-renderers
 code --install-extension ms-toolsai.vscode-jupyter-cell-tags
 code --install-extension ms-toolsai.vscode-jupyter-slideshow
 code --install-extension ms-vscode-remote.remote-containers
+code --install-extension nrwl.angular-console
 code --install-extension octref.vetur
 code --install-extension oderwat.indent-rainbow
 code --install-extension ofhumanbondage.react-proptypes-intellisense
@@ -74,8 +78,9 @@ code --install-extension vincaslt.highlight-matching-tag
 code --install-extension visualstudioexptteam.intellicode-api-usage-examples
 code --install-extension visualstudioexptteam.vscodeintellicode
 code --install-extension vscode-icons-team.vscode-icons
-code --install-extension vscodevim.vim
 code --install-extension wayou.vscode-todo-highlight
 code --install-extension wix.vscode-import-cost
+code --install-extension yoavbls.pretty-ts-errors
 code --install-extension yzane.markdown-pdf
 code --install-extension yzhang.markdown-all-in-one
+code --install-extension zixuanchen.vitest-explorer
