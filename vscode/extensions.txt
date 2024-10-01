@@ -21,6 +21,7 @@ code --install-extension dracula-theme.theme-dracula
 code --install-extension eamodio.gitlens
 code --install-extension editorconfig.editorconfig
 code --install-extension esbenp.prettier-vscode
+code --install-extension figma.figma-vscode-extension
 code --install-extension firsttris.vscode-jest-runner
 code --install-extension formulahendry.auto-rename-tag
 code --install-extension foxundermoon.next-js
@@ -30,6 +31,7 @@ code --install-extension graphql.vscode-graphql
 code --install-extension graphql.vscode-graphql-execution
 code --install-extension graphql.vscode-graphql-syntax
 code --install-extension hediet.vscode-drawio
+code --install-extension hoovercj.vscode-power-mode
 code --install-extension ics.japanese-proofreading
 code --install-extension ionutvmi.path-autocomplete
 code --install-extension jcbuisson.vue
