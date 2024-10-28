@@ -13,3 +13,12 @@ Google IME 環境設定上のことえりカスタムキーマップ設定で、
 ```
 で実現することが可能。  
 ただし、その場合に　MacVim　の　IME Toggle　機能が正しく動かないことを検知している。
+
+## 性能改善
+
+https://x.com/kyrylosilin/status/1849921659546812732
+
+1. Open command pallet (Ctrl + Shilf + P)
+2. Enter "Preferences: Configure Runtime Arguments"
+3. Add config: "disable-hardware-acceleration": true
+4. Restart VSCode
