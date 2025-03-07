@@ -1,0 +1,26 @@
+{
+  "window.commandCenter": true,
+  "workbench.activityBar.orientation": "vertical",
+  "workbench.colorTheme": "Dracula Theme",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "editor.fontFamily": "OperatorMonoLig-Book",
+  "editor.fontLigatures": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [80],
+  "editor.scrollBeyondLastLine": false,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.suggestSelection": "first",
+  "hediet.vscode-drawio.theme": "Kennedy",
+  "search.exclude": {
+    "yarn.lock": true,
+    "android": true,
+    "ios": true
+  },
+  "japanese-proofreading.textlint.全角文字と半角文字の間": true // 日本語文章の可読性向上のため、全角半角間の自動補正を有効化
+}
