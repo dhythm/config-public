@@ -1,0 +1,18 @@
+cursor --list-extensions | xargs -L 1 echo code --install-extension
+
+code --install-extension biomejs.biome
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension dracula-theme.theme-dracula
+code --install-extension esbenp.prettier-vscode
+code --install-extension hediet.vscode-drawio
+code --install-extension ics.japanese-proofreading
+code --install-extension kamikillerto.vscode-colorize
+code --install-extension oderwat.indent-rainbow
+code --install-extension orta.vscode-jest
+code --install-extension redhat.vscode-yaml
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension vitest.explorer
+code --install-extension vscodevim.vim
+code --install-extension wayou.vscode-todo-highlight
+code --install-extension yzane.markdown-pdf
+code --install-extension yzhang.markdown-all-in-one
