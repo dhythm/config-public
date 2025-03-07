@@ -1,119 +1,103 @@
 {
-  "terminal.integrated.fontFamily": "MesloLGS NF",
-  // @Drakal added
-  // I'd also consider adjusting line height if icons are cut off on top too or things look super cramped.
-  // "terminal.integrated.lineHeight": 1.3
-  // @ChongTang, @ramonsantos added
-  // @gaochundong said it works like a charm.
-  // "terminal.integrated.fontFamily": "Hack Nerd Font"
-  // @dalekurt added (belows which gives me the the fonts for the terminal and the icons from Nerd Font.)
-  // "terminal.integrated.fontFamily": "'Source Code Pro for Powerline', 'Hack Nerd Font'
-  // @nickhingston , @olivebay added for powerlevel10k
-  // I use powerline10k - which uses https://github.com/romkatv/powerlevel10k/#recommended-meslo-nerd-font-patched-for-powerlevel10k
-  // so this worked for me:
-  // "terminal.integrated.fontFamily": "MesloLGS NF"
-  // @kaustuv added
-  // after the changing the font, still had some issues with the glyph spacing in the integrated terminal - fixed it with
-  // @ar2zee : fixed the problem for me.
-  // "terminal.integrated.rendererType": "canvas"
-  "editor.fontFamily": "OperatorMonoLig-Book",
-  "editor.fontLigatures": true,
-  "search.exclude": {
-    "yarn.lock": true,
-    "android": true,
-    "ios": true
-  },
-  "editor.renderWhitespace": "boundary",
-  "editor.rulers": [80],
-  "editor.codeActionsOnSave": {
-    // "source.organizeImports": "always",
-    "source.fixAll.eslint": "explicit",
-    "quickfix.biome": "explicit",
-    "source.organizeImports.biome": "explicit"
-  },
-  // formatter
-  // "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.defaultFormatter": "biomejs.biome",
-  "biome.enabled": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnType": true,
-  "workbench.iconTheme": "material-icon-theme",
-  "eslint.alwaysShowStatus": true,
-  "eslint.useFlatConfig": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "typescript.referencesCodeLens.enabled": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "python.formatting.provider": "black",
-  "python.linting.mypyEnabled": true,
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    }
-  },
-  "isort.args": ["--profile", "black"],
+    // --- ターミナル関連 ---
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.rendererType": "canvas",
 
-  "[dart]": {
-    "editor.defaultFormatter": "Dart-Code.dart-code",
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
+    // --- エディタの基本設定 ---
+    "editor.fontFamily": "OperatorMonoLig-Book",
+    "editor.fontLigatures": true,
+    "editor.renderWhitespace": "boundary",
     "editor.rulers": [80],
-    "editor.selectionHighlight": false,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.scrollBeyondLastLine": false,
+    "editor.gotoLocation.multipleDefinitions": "goto",
     "editor.suggestSelection": "first",
-    "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": "off"
-  },
-  "diffEditor.ignoreTrimWhitespace": false,
-  // "emmet.triggerExpansionOnTab": true,
-  "emmet.showExpandedAbbreviation": "never",
-  // "emmet.showSuggestionsAsSnippets": true,
-  "editor.snippetSuggestions": "bottom",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook",
-    "*.sqlite3": "default"
-  },
-  "editor.gotoLocation.multipleDefinitions": "goto",
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "notebook.cellToolbarLocation": {
-    "default": "right",
-    "jupyter-notebook": "left"
-  },
-  "redhat.telemetry.enabled": true,
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
-  },
-  "jest.autoRun": "off",
-  "vitest.enable:": true,
-  "rust-analyzer.checkOnSave.command": "clippy",
-  "japanese-proofreading.textlint.全角文字と半角文字の間": false,
-  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
-  "editor.scrollBeyondLastLine": false,
-  "typescript.preferGoToSourceDefinition": true,
-  "typescriptreact.preferGoToSourceDefinition": true,
-  "javascript.preferGoToSourceDefinition": true,
-  "hediet.vscode-drawio.theme": "Kennedy",
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
-  "nxConsole.showNodeVersionOnStartup": false,
-  // "typescript.preferGoToSourceDefinition": true,
-  // "typescriptreact.preferGoToSourceDefinition": true,
-  // "javascript.preferGoToSourceDefinition": true,
-  "prisma.showPrismaDataPlatformNotification": false,
-  "github.copilot.editor.enableAutoCompletions": true,
-  // "deno.enable": true,
-  // "deno.lint": true,
-  // "deno.unstable": false,
-  "i18n-ally.annotationInPlace": false,
-  "i18n-ally.editor.preferEditor": true,
-  "i18n-ally.enabledFrameworks": ["react-i18next"],
-  "i18n-ally.keystyle": "flat",
-  // "i18n-ally.localesPaths": ["frontend/src/i18n/locales"],
-  // "i18n-ally.pathMatcher": "{locale}/general_translation.json",
-  "i18n-ally.displayLanguage": "ja",
-  "i18n-ally.sourceLanguage": "ja"
-}
+  
+    // --- フォーマッタ・自動整形 ---
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+      "quickfix.biome": "explicit",
+      "source.organizeImports.biome": "explicit"
+    },
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+  
+    // --- 検索・ファイル関連 ---
+    "search.exclude": {
+      "yarn.lock": true,
+      "android": true,
+      "ios": true
+    },
+  
+    // --- テーマ・アイコン ---
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Default Dark+",
+  
+    // --- ESLint 関連 ---
+    "eslint.alwaysShowStatus": true,
+    "eslint.useFlatConfig": false,
+  
+    // --- TypeScript / JavaScript ---
+    // ファイル移動時のインポート自動更新や定義参照の改善を行います。
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.referencesCodeLens.enabled": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.preferGoToSourceDefinition": true,
+    "typescriptreact.preferGoToSourceDefinition": true,
+    "javascript.preferGoToSourceDefinition": true,
+  
+    // --- Python ---
+    "python.formatting.provider": "black",
+    "python.linting.mypyEnabled": true,
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+      }
+    },
+    "isort.args": ["--profile", "black"],
+    
+    // --- 差分表示 ---
+    "diffEditor.ignoreTrimWhitespace": false,
+  
+    // --- Emmet / スニペット ---
+    "emmet.showExpandedAbbreviation": "never",
+    "editor.snippetSuggestions": "bottom",
+  
+    // --- エディタの関連付け ---
+    "workbench.editorAssociations": {
+      "*.ipynb": "jupyter-notebook",
+      "*.sqlite3": "default"
+    },
+  
+    // --- その他拡張・ツール ---
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "notebook.cellToolbarLocation": {
+      "default": "right",
+      "jupyter-notebook": "left"
+    },
+    "redhat.telemetry.enabled": true,
+    "[prisma]": {
+      "editor.defaultFormatter": "Prisma.prisma"
+    },
+    "jest.autoRun": "off",
+    "vitest.enable": true,
+    "rust-analyzer.checkOnSave.command": "clippy",
+    "japanese-proofreading.textlint.全角文字と半角文字の間": false,
+    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+    "hediet.vscode-drawio.theme": "Kennedy",
+    "extensions.experimental.affinity": {
+      "asvetliakov.vscode-neovim": 1
+    },
+    "nxConsole.showNodeVersionOnStartup": false,
+    "prisma.showPrismaDataPlatformNotification": false,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "i18n-ally.annotationInPlace": false,
+    "i18n-ally.editor.preferEditor": true,
+    "i18n-ally.enabledFrameworks": ["react-i18next"],
+    "i18n-ally.keystyle": "flat",
+    "i18n-ally.displayLanguage": "ja",
+    "i18n-ally.sourceLanguage": "ja"
+  }
