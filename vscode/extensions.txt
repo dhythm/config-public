@@ -39,6 +39,7 @@ code --install-extension ms-python.python
 code --install-extension ms-python.vscode-pylance
 code --install-extension oderwat.indent-rainbow
 code --install-extension ofhumanbondage.react-proptypes-intellisense
+code --install-extension omlet.omlet-vscode-extension
 code --install-extension orta.vscode-jest
 code --install-extension pflannery.vscode-versionlens
 code --install-extension pkief.material-icon-theme
