@@ -3,6 +3,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# プラグイン
+# `source $ZSH/oh-my-zsh.sh` より前で実行
+plugins=(git)
+
 # Oh-My-Zsh の設定
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
@@ -10,9 +14,6 @@ source $ZSH/oh-my-zsh.sh
 # Powerlevel10k の設定
 source $ZSH/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# プラグイン
-plugins=(git)
 
 # 環境変数
 export LANG=ja_JP.UTF-8
