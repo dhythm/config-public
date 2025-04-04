@@ -8,6 +8,9 @@ cursor --install-extension esbenp.prettier-vscode
 cursor --install-extension hediet.vscode-drawio
 cursor --install-extension ics.japanese-proofreading
 cursor --install-extension kamikillerto.vscode-colorize
+cursor --install-extension ms-python.debugpy
+cursor --install-extension ms-python.python
+cursor --install-extension ms-python.vscode-pylance
 cursor --install-extension oderwat.indent-rainbow
 cursor --install-extension omlet.omlet-vscode-extension
 cursor --install-extension orta.vscode-jest
