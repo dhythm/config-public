@@ -22,5 +22,10 @@
     "android": true,
     "ios": true
   },
-  "japanese-proofreading.textlint.全角文字と半角文字の間": true // 日本語文章の可読性向上のため、全角半角間の自動補正を有効化
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferGoToSourceDefinition": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.preferGoToSourceDefinition": true,
+  "japanese-proofreading.textlint.全角文字と半角文字の間": false
 }
