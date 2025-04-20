@@ -15,6 +15,7 @@ cursor --install-extension oderwat.indent-rainbow
 cursor --install-extension omlet.omlet-vscode-extension
 cursor --install-extension orta.vscode-jest
 cursor --install-extension redhat.vscode-yaml
+cursor --install-extension rooveterinaryinc.roo-cline
 cursor --install-extension streetsidesoftware.code-spell-checker
 cursor --install-extension vitest.explorer
 cursor --install-extension vscodevim.vim
