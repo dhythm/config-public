@@ -4,6 +4,7 @@ cursor --install-extension antfu.slidev
 cursor --install-extension biomejs.biome
 cursor --install-extension dbaeumer.vscode-eslint
 cursor --install-extension dracula-theme.theme-dracula
+cursor --install-extension enhancedjax.vscode-ayu-zed
 cursor --install-extension esbenp.prettier-vscode
 cursor --install-extension hediet.vscode-drawio
 cursor --install-extension ics.japanese-proofreading
@@ -14,6 +15,7 @@ cursor --install-extension ms-python.vscode-pylance
 cursor --install-extension oderwat.indent-rainbow
 cursor --install-extension omlet.omlet-vscode-extension
 cursor --install-extension orta.vscode-jest
+cursor --install-extension prisma.prisma
 cursor --install-extension redhat.vscode-yaml
 cursor --install-extension rooveterinaryinc.roo-cline
 cursor --install-extension streetsidesoftware.code-spell-checker
