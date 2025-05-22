@@ -23,6 +23,12 @@ export PATH="$VOLTA_HOME/bin:$HOME/.local/bin:$HOME/.deno/bin:$PATH"
 # anyenv 初期化
 eval "$(anyenv init -)"
 
+# pyenv 初期化
+eval "$(pyenv init -)"
+
+# direnv 初期化
+eval "$(direnv hook zsh)"
+
 # Zsh のオプション
 setopt IGNOREEOF share_history histignorealldups
 
@@ -94,3 +100,9 @@ alias gstd='git stash drop'
 alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gsts='git stash save'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '$HOME/local/bin/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/local/bin/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '$HOME/local/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/local/bin/google-cloud-sdk/completion.zsh.inc'; fi
