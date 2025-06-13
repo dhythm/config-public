@@ -1,6 +1,7 @@
 cursor --list-extensions | xargs -L 1 echo cursor --install-extension
 
 cursor --install-extension antfu.slidev
+cursor --install-extension anthropic.claude-code
 cursor --install-extension biomejs.biome
 cursor --install-extension dbaeumer.vscode-eslint
 cursor --install-extension dracula-theme.theme-dracula
@@ -9,6 +10,7 @@ cursor --install-extension esbenp.prettier-vscode
 cursor --install-extension hediet.vscode-drawio
 cursor --install-extension ics.japanese-proofreading
 cursor --install-extension kamikillerto.vscode-colorize
+cursor --install-extension marp-team.marp-vscode
 cursor --install-extension ms-python.debugpy
 cursor --install-extension ms-python.python
 cursor --install-extension ms-python.vscode-pylance
