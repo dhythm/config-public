@@ -5,6 +5,7 @@ cursor --install-extension anthropic.claude-code
 cursor --install-extension biomejs.biome
 cursor --install-extension dbaeumer.vscode-eslint
 cursor --install-extension dracula-theme.theme-dracula
+cursor --install-extension eamodio.gitlens
 cursor --install-extension enhancedjax.vscode-ayu-zed
 cursor --install-extension esbenp.prettier-vscode
 cursor --install-extension hediet.vscode-drawio
