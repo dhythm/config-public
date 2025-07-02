@@ -1,5 +1,7 @@
 code --list-extensions | xargs -L 1 echo code --install-extension
 
+code --install-extension alexcvzz.vscode-sqlite
+code --install-extension anthropic.claude-code
 code --install-extension antonholmberg.remove-bg
 code --install-extension arjun.swagger-viewer
 code --install-extension asvetliakov.vscode-neovim
@@ -8,6 +10,7 @@ code --install-extension chakrounanas.turbo-console-log
 code --install-extension christian-kohler.path-intellisense
 code --install-extension chrmarti.regex
 code --install-extension dbaeumer.vscode-eslint
+code --install-extension donjayamanne.githistory
 code --install-extension dracula-theme.theme-dracula
 code --install-extension eamodio.gitlens
 code --install-extension editorconfig.editorconfig
@@ -20,10 +23,13 @@ code --install-extension github.copilot-chat
 code --install-extension hediet.vscode-drawio
 code --install-extension ics.japanese-proofreading
 code --install-extension ionutvmi.path-autocomplete
+code --install-extension jackiotyu.git-worktree-manager
 code --install-extension jtr.vscode-position
 code --install-extension kamikillerto.vscode-colorize
 code --install-extension kimuson.ts-type-expand
+code --install-extension letmaik.git-tree-compare
 code --install-extension lokalise.i18n-ally
+code --install-extension marp-team.marp-vscode
 code --install-extension mgmcdermott.vscode-language-babel
 code --install-extension mikestead.dotenv
 code --install-extension mikoz.autoflake-extension
