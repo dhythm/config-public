@@ -10,6 +10,7 @@ cursor --install-extension enhancedjax.vscode-ayu-zed
 cursor --install-extension esbenp.prettier-vscode
 cursor --install-extension hediet.vscode-drawio
 cursor --install-extension ics.japanese-proofreading
+cursor --install-extension jackiotyu.git-worktree-manager
 cursor --install-extension kamikillerto.vscode-colorize
 cursor --install-extension marp-team.marp-vscode
 cursor --install-extension ms-python.debugpy
