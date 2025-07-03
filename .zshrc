@@ -18,7 +18,7 @@ source $ZSH/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 # 環境変数
 export LANG=ja_JP.UTF-8
 export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$HOME/.local/bin:$HOME/.deno/bin:$PATH"
+export PATH="$HOME/local/bin:$VOLTA_HOME/bin:$HOME/.local/bin:$HOME/.deno/bin:$PATH"
 
 # anyenv 初期化
 eval "$(anyenv init -)"
