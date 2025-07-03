@@ -1,7 +1,7 @@
 {
   "window.commandCenter": true,
   "workbench.activityBar.orientation": "vertical",
-  "workbench.colorTheme": "Dracula Theme",
+  "workbench.colorTheme": "Ayu Mirage Zed",
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "editor.fontFamily": "OperatorMonoLig-Book",
   "editor.fontLigatures": true,
@@ -27,5 +27,14 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.referencesCodeLens.enabled": true,
   "typescript.preferGoToSourceDefinition": true,
-  "japanese-proofreading.textlint.全角文字と半角文字の間": false
+  "japanese-proofreading.textlint.全角文字と半角文字の間": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "hediet.vscode-drawio.resizeImages": null,
+  "cursor.composer.shouldAllowCustomModes": true,
+  "workbench.editorAssociations": {
+    "*.mdc": "default"
+  },
+  "jest.runMode": "on-save"
 }
