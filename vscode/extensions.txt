@@ -9,6 +9,7 @@ code --install-extension biomejs.biome
 code --install-extension chakrounanas.turbo-console-log
 code --install-extension christian-kohler.path-intellisense
 code --install-extension chrmarti.regex
+code --install-extension coderabbit.coderabbit-vscode
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension donjayamanne.githistory
 code --install-extension dracula-theme.theme-dracula
