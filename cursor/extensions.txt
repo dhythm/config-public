@@ -3,6 +3,7 @@ cursor --list-extensions | xargs -L 1 echo cursor --install-extension
 cursor --install-extension antfu.slidev
 cursor --install-extension anthropic.claude-code
 cursor --install-extension biomejs.biome
+cursor --install-extension coderabbit.coderabbit-vscode
 cursor --install-extension dbaeumer.vscode-eslint
 cursor --install-extension dracula-theme.theme-dracula
 cursor --install-extension eamodio.gitlens
