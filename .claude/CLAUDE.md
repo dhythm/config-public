@@ -1,4 +1,4 @@
-# CLUADE.md
+# CLAUDE.md
 
 ## ガイドライン
 
