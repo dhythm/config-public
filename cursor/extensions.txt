@@ -2,6 +2,7 @@ cursor --list-extensions | xargs -L 1 echo cursor --install-extension
 
 cursor --install-extension antfu.slidev
 cursor --install-extension anthropic.claude-code
+cursor --install-extension anysphere.remote-containers
 cursor --install-extension biomejs.biome
 cursor --install-extension coderabbit.coderabbit-vscode
 cursor --install-extension dbaeumer.vscode-eslint
