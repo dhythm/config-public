@@ -1,3 +1,8 @@
+---
+allowed-tools: Bash(git:*)
+description: Commit the current work and push to a repo
+---
+
 # Commit and Push
 
 ## Instructions
