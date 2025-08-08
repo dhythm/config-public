@@ -5,9 +5,9 @@ description: Generate PR description and automatically create pull request on Gi
 
 ## Context
 
-- Current git status: !`git status`
-- Changes in this PR: !`git diff master...HEAD`
-- Commits in this PR: !`git log --oneline master..HEAD`
+- Current git status: `git status`
+- Changes in this PR: `git diff master...HEAD`
+- Commits in this PR: `git log --oneline master..HEAD`
 - PR template: @.github/PULL_REQUEST_TEMPLATE.md
 
 
