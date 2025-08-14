@@ -5,7 +5,7 @@ description: Update a PR description
 
 ## Input 
 
-#$ARGUMENtS
+$ARGUMENTS
 
 ## Context
 
