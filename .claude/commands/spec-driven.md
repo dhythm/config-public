@@ -11,7 +11,7 @@ spec-driven development は、以下の 5 つのフェーズからなる開発�
 ### 1. 事前準備フェーズ
 
 - ユーザーが Claude Code に対して、実行したいタスクの概要を伝える
-- このフェーズで !`mkdir -p ./.claude/specs` を実行します
+- このフェーズで `mkdir -p ./.claude/specs` を実行します
 - `./claude/specs` 内にタスクの概要から適切な spec 名を考えて、その名前のディレクトリを作成します
   - たとえば、「記事コンポーネントを作成する」というタスクなら `./.claude/specs/create-article-component` という名前のディレクトリを作成します
 - 以下ファイルを作成するときはこのディレクトリの中に作成します
