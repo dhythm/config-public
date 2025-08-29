@@ -20,6 +20,7 @@ cursor --install-extension ms-python.python
 cursor --install-extension ms-python.vscode-pylance
 cursor --install-extension oderwat.indent-rainbow
 cursor --install-extension omlet.omlet-vscode-extension
+cursor --install-extension openai.chatgpt
 cursor --install-extension orta.vscode-jest
 cursor --install-extension prisma.prisma
 cursor --install-extension redhat.vscode-yaml
