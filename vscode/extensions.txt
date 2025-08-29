@@ -45,6 +45,7 @@ code --install-extension ms-vscode-remote.remote-containers
 code --install-extension oderwat.indent-rainbow
 code --install-extension ofhumanbondage.react-proptypes-intellisense
 code --install-extension omlet.omlet-vscode-extension
+code --install-extension openai.chatgpt
 code --install-extension orta.vscode-jest
 code --install-extension pflannery.vscode-versionlens
 code --install-extension pkief.material-icon-theme
