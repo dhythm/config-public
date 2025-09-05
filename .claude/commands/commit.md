@@ -1,6 +1,6 @@
 ---
 allowed-tools: Bash(gh:*), Bash(git:*)
-description: Commit the current work and push to remote repo
+description: Commit the current work with conventional commits
 ---
 
 # Commit with proper message
@@ -14,4 +14,5 @@ description: Commit the current work and push to remote repo
 
 ## Guideline
 
-コミットメッセージは修正内容を元に考えてください。
+- コミットメッセージは修正内容を元に考えてください。
+- follow Conventional Commits
