@@ -5,7 +5,6 @@ description: Create an issue on GitHub and describe it
 
 ## Context
 
-- $ARGUMENTS includes repository URL
 - use `gh` command to enable to access the private repo
 
 ## Instructions
