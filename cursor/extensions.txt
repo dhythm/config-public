@@ -2,6 +2,7 @@ cursor --list-extensions | xargs -L 1 echo cursor --install-extension
 
 cursor --install-extension antfu.slidev
 cursor --install-extension anthropic.claude-code
+cursor --install-extension anysphere.cursorpyright
 cursor --install-extension anysphere.remote-containers
 cursor --install-extension biomejs.biome
 cursor --install-extension coderabbit.coderabbit-vscode
@@ -10,6 +11,8 @@ cursor --install-extension dracula-theme.theme-dracula
 cursor --install-extension eamodio.gitlens
 cursor --install-extension enhancedjax.vscode-ayu-zed
 cursor --install-extension esbenp.prettier-vscode
+cursor --install-extension google.gemini-cli-vscode-ide-companion
+cursor --install-extension google.geminicodeassist
 cursor --install-extension hediet.vscode-drawio
 cursor --install-extension ics.japanese-proofreading
 cursor --install-extension jackiotyu.git-worktree-manager
