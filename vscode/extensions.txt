@@ -21,6 +21,8 @@ code --install-extension formulahendry.auto-rename-tag
 code --install-extension foxundermoon.next-js
 code --install-extension github.copilot
 code --install-extension github.copilot-chat
+code --install-extension google.gemini-cli-vscode-ide-companion
+code --install-extension google.geminicodeassist
 code --install-extension hediet.vscode-drawio
 code --install-extension ics.japanese-proofreading
 code --install-extension ionutvmi.path-autocomplete
@@ -41,6 +43,7 @@ code --install-extension ms-python.debugpy
 code --install-extension ms-python.isort
 code --install-extension ms-python.python
 code --install-extension ms-python.vscode-pylance
+code --install-extension ms-python.vscode-python-envs
 code --install-extension ms-vscode-remote.remote-containers
 code --install-extension oderwat.indent-rainbow
 code --install-extension ofhumanbondage.react-proptypes-intellisense
@@ -53,6 +56,7 @@ code --install-extension pnp.polacode
 code --install-extension prisma.prisma
 code --install-extension redhat.vscode-yaml
 code --install-extension rooveterinaryinc.roo-cline
+code --install-extension rust-lang.rust-analyzer
 code --install-extension shardulm94.trailing-spaces
 code --install-extension shd101wyy.markdown-preview-enhanced
 code --install-extension streetsidesoftware.code-spell-checker
