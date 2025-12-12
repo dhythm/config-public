@@ -3,6 +3,8 @@
     "allow": [
       "Bash(npm run lint)",
       "Bash(npm run test:*)",
+      "Bash(pnpm run lint)",
+      "Bash(pnpm run test:*)",
       "Read(~/.zshrc)",
       "WebSearch:*",
       "WebFetch:*"
