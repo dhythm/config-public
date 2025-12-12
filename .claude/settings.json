@@ -1,6 +1,13 @@
 {
   "permissions": {
-    "defaultMode": "acceptEdits",
-    "allow": ["Bash(npm run lint)", "Bash(npm run test:*)", "Read(~/.zshrc)"],
-  }
+    "allow": [
+      "Bash(npm run lint)",
+      "Bash(npm run test:*)",
+      "Read(~/.zshrc)",
+      "WebSearch:*",
+      "WebFetch:*"
+    ],
+    "defaultMode": "acceptEdits"
+  },
+  "alwaysThinkingEnabled": true,
 }
