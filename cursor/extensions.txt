@@ -14,6 +14,7 @@ cursor --install-extension esbenp.prettier-vscode
 cursor --install-extension google.gemini-cli-vscode-ide-companion
 cursor --install-extension google.geminicodeassist
 cursor --install-extension hediet.vscode-drawio
+cursor --install-extension ics.japanese-proofreading
 cursor --install-extension jackiotyu.git-worktree-manager
 cursor --install-extension kamikillerto.vscode-colorize
 cursor --install-extension marp-team.marp-vscode
