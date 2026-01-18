@@ -1,0 +1,93 @@
+# Path to your Oh My Zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time Oh My Zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="eastwood"
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# You may need to manually set your language environment
+export LANG=ja_JP.UTF-8
+
+# Color
+autoload -Uz colors
+colors
+export LSCOLORS=gxfxcxdxbxegedabagacag
+export LS_COLORS='di=36;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;46'
+
+# Auto Complete
+autoload -Uz compinit
+compinit -u
+
+# Keybindings
+bindkey "^P" up-line-or-beginning-search
+bindkey "^N" down-line-or-beginning-search
+
+# Alias
+alias ls='ls -lhGF'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias reload='source ~/.zshrc'
+alias mvim='open -a /Applications/MacVim.app/Contents/MacOS/MacVim'
+alias simrec='xcrun simctl io booted recordVideo rec.mp4'
+
+# Alias for Git
+alias ga='git add'
+alias gaa='git add .'
+alias gaaa='git add --all'
+alias gau='git add --update'
+alias gb='git branch'
+alias gbd='git branch -D '
+alias gc='git commit'
+alias gcm='git commit --message'
+alias gcf='git commit --fixup'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gcom='git checkout master'
+alias gcos='git checkout staging'
+alias gcod='git checkout develop'
+alias gd='git diff'
+alias gda='git diff HEAD'
+alias gi='git init'
+alias glg='git log --graph --oneline --decorate --all'
+alias gld='git log --pretty=format:"%h %ad %s" --date=short --all'
+alias gm='git merge --no-ff'
+alias gma='git merge --abort'
+alias gmc='git merge --continue'
+alias gp='git pull'
+alias gpo='git pull origin'
+alias gpom='git pull origin master'
+alias gpoc='git pull origin `git rev-parse --abbrev-ref HEAD`'
+alias gpuoc='git pull origin HEAD'
+alias gpr='git pull --rebase'
+alias gpuo='git push origin'
+alias gpuom='git push origin master'
+alias gr='git rebase'
+alias gs='git status'
+alias gss='git status --short'
+alias gst='git stash'
+alias gsta='git stash apply'
+alias gstd='git stash drop'
+alias gstl='git stash list'
+alias gstp='git stash pop'
+alias gsts='git stash save'
+
+# Additional Settings
+
+export PATH="$PATH:$HOME/.local/bin"
+
+eval "$(anyenv init -)"
+eval "$(mise activate zsh)"
