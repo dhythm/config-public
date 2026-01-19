@@ -19,14 +19,13 @@ code --install-extension marp-team.marp-vscode
 code --install-extension ms-python.debugpy
 code --install-extension ms-python.python
 code --install-extension ms-python.vscode-pylance
+code --install-extension ms-python.vscode-python-envs
 code --install-extension oderwat.indent-rainbow
 code --install-extension openai.chatgpt
 code --install-extension orta.vscode-jest
 code --install-extension redhat.vscode-yaml
 code --install-extension shardulm94.trailing-spaces
 code --install-extension streetsidesoftware.code-spell-checker
-code --install-extension visualstudioexptteam.intellicode-api-usage-examples
-code --install-extension visualstudioexptteam.vscodeintellicode
 code --install-extension vitest.explorer
 code --install-extension vscodevim.vim
 code --install-extension wayou.vscode-todo-highlight
