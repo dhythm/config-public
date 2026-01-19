@@ -1,121 +1,123 @@
-"===============================================================================
-" Improved vimrc for MacVim
-"===============================================================================
+" System vimrc file for MacVim
+"
+" Author:       Bjorn Winckler <bjorn.winckler@gmail.com>
+" Maintainer:   macvim-dev (https://github.com/macvim-dev)
 
-"------------------------------
+set nocompatible
+
+" The default for 'backspace' is very confusing to new users, so change it to a
+" more sensible value.  Add "set backspace&" to your ~/.vimrc to reset it.
+set backspace+=indent,eol,start
+
+" Python2
+" MacVim is configured by default in the binary release to use the
+" pre-installed System python2 version. However, following code tries to
+" find a Homebrew, MacPorts or an installation from python.org:
+if exists("&pythondll") && exists("&pythonhome")
+  " Homebrew python 2.7
+  if filereadable("/usr/local/Frameworks/Python.framework/Versions/2.7/Python")
+    set pythondll=/usr/local/Frameworks/Python.framework/Versions/2.7/Python
+
+  " MacPorts python 2.7
+  elseif filereadable("/opt/local/Library/Frameworks/Python.framework/Versions/2.7/Python")
+    set pythondll=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/Python
+
+  " https://www.python.org/downloads/mac-osx/
+  elseif filereadable("/Library/Frameworks/Python.framework/Versions/2.7/Python")
+    set pythondll=/Library/Frameworks/Python.framework/Versions/2.7/Python
+  endif
+endif
+
+" Python3
+" MacVim is configured by default in the binary release to set
+" pythonthreedll to Homebrew python3. If it cannot be found, the following
+" code tries to find Python3 from other popular locations.  Note that we are
+" using "Current" for the version, because Vim supports the stable ABI and
+" therefore any new version of Python3 will work.
+if exists("&pythonthreedll") && exists("&pythonthreehome") &&
+      \ !filereadable(&pythonthreedll)
+  " MacPorts python
+  if filereadable("/opt/local/Library/Frameworks/Python.framework/Versions/Current/Python")
+    set pythonthreedll=/opt/local/Library/Frameworks/Python.framework/Versions/Current/Python
+
+  " macOS default Python, installed by 'xcode-select --install'
+  elseif filereadable("/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/Current/Python3")
+    set pythonthreedll=/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/Current/Python3
+
+  " https://www.python.org/downloads/mac-osx/
+  elseif filereadable("/Library/Frameworks/Python.framework/Versions/Current/Python")
+    set pythonthreedll=/Library/Frameworks/Python.framework/Versions/Current/Python
+  endif
+endif
+
+" vim: sw=2 ts=2 et
+
 " 基本設定
-"------------------------------
-set nocompatible               " Vim標準の互換性モードを無効化
-set encoding=utf-8             " 内部エンコーディングをUTF-8に設定
+set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 set fileformats=unix,dos,mac
 
-" バックスペースの挙動（インデント、改行、行頭の削除を許可）
-set backspace=indent,eol,start
+" 検索
+set ignorecase                                            " 大文字小文字を区別せず検索
+set smartcase                                             " 大文字を含む場合は区別する
+set wrapscan                                              " ファイル末尾で再検索
 
-"------------------------------
-" 検索の設定
-"------------------------------
-set ignorecase                 " 大文字小文字を区別せず検索
-set smartcase                  " 大文字を含む場合は区別する
-set wrapscan                   " ファイル末尾で再検索
+" インデント・タブ
+set tabstop=2                                             " タブ幅を2に設定
+set expandtab                                             " タブ入力時にスペースを挿入
+set softtabstop=2                                         " 挿入時のタブ幅を2に設定
+set shiftwidth=2                                          " 自動インデント時の幅を2に設定
+set autoindent                                            " 自動インデントを有効化
 
-"------------------------------
-" インデント・タブ設定
-"------------------------------
-set tabstop=2                  " タブ幅を2に設定
-set expandtab                  " タブ入力時にスペースを挿入
-set softtabstop=2              " 挿入時のタブ幅を2に設定
-set shiftwidth=2               " 自動インデント時の幅を2に設定
-set autoindent                 " 自動インデントを有効化
-
-"------------------------------
-" 表示設定
-"------------------------------
-set number                     " 行番号表示
-set ruler                      " ルーラー表示
-set list                       " 空白文字の可視化
-set listchars=tab:>.,trail:_,extends:>,precedes:<,nbsp:% 
-set wrap                       " 行折返し表示
-set display=lastline           " 折返し時に最後の行まで表示
-
-syntax on                      " 構文強調表示を有効化
-colorscheme desert             " カラースキームを設定（必要に応じて変更）
+" 表示
+set number                                                " 行番号表示
+set ruler                                                 " ルーラー表示
+set list                                                  " 空白文字の可視化
+set listchars=tab:>.,trail:_,extends:>,precedes:<,nbsp:%  " タブ/改行/スペース等の可視化
+set wrap                                                  " 行折返し表示
+set display=lastline                                      " 折返し時に最後の行まで表示
+syntax on                                                 " 構文強調表示を有効化
+colorscheme desert                                        " カラースキームを設定（必要に応じて変更）
 highlight LineNr ctermfg=darkyellow
 set background=dark
-set laststatus=2               " 常にステータスラインを表示
-set cmdheight=2                " コマンドラインの高さを2に設定
-set title                      " タイトルバーにファイル名を表示
+set laststatus=2                                          " 常にステータスラインを表示
+set cmdheight=2                                           " コマンドラインの高さを2に設定
+set title                                                 " タイトルバーにファイル名を表示
 
-"------------------------------
-" 折りたたみ設定
-"------------------------------
+" 折りたたみ
 set foldtext=Foldtext()
 set foldcolumn=3
 set fillchars=vert:\|
 hi Folded gui=bold term=standout ctermbg=LightGrey ctermfg=DarkBlue guibg=Grey30 guifg=Grey80
 hi FoldColumn gui=bold term=standout ctermbg=LightGrey ctermfg=DarkBlue guibg=Grey guifg=DarkBlue
 
-"------------------------------
-" ファイル操作設定
-"------------------------------
-set nobackup                   " バックアップファイルを作成しない
-set writebackup                " 書き込み時のバックアップは作成（上書き成功後削除）
-set noswapfile                 " swapファイルを作成しない
-" 編集復元用のundoファイルを有効化（安全性向上）
-set undofile
-set hidden                     " バッファ切替時の強制保存を不要に
+" ファイル操作
+set nobackup                                              " バックアップファイルを作成しない
+set writebackup                                           " 書き込み時のバックアップは作成（上書き成功後削除）
+set noswapfile                                            " swapファイルを作成しない
+set undofile                                              " 編集復元用のundoファイルを有効化（安全性向上）
+set hidden                                                " バッファ切替時の強制保存を不要に
+set splitbelow                                            " 新規水平分割は下側に開く
+set splitright                                            " 新規垂直分割は右側に開く
 
-set splitbelow                 " 新規水平分割は下側に開く
-set splitright                 " 新規垂直分割は右側に開く
-
-"------------------------------
-" コマンドライン・補完設定
-"------------------------------
-set wildmenu                   " コマンド補完メニューの表示
-set pumheight=10               " 補完ポップアップメニューの高さ
-" 日本語対応の自動改行・コメント設定
-set formatoptions+=mM
+" コマンドライン・補完
+set wildmenu                                              " コマンド補完メニューの表示
+set pumheight=10                                          " 補完ポップアップメニューの高さ
+set formatoptions+=mM                                     " 日本語対応の自動改行・コメント設定
 set formatoptions-=ro
 set formatoptions+=q
 
-"------------------------------
-" IME（日本語入力）設定
-"------------------------------
-set noimdisable                " IME切替を有効化
-set iminsert=2                 " 挿入モード時のIME状態
+" IME（日本語入力）
+set noimdisable                                           " IME切替を有効化
+set iminsert=2                                            " 挿入モード時のIME状態
 
-"------------------------------
-" Python環境の設定
-"------------------------------
-if exists("&pythondll") && exists("&pythonhome")
-  if filereadable("/usr/local/Frameworks/Python.framework/Versions/2.7/Python")
-    set pythondll=/usr/local/Frameworks/Python.framework/Versions/2.7/Python
-  elseif filereadable("/opt/local/Library/Frameworks/Python.framework/Versions/2.7/Python")
-    set pythondll=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/Python
-  elseif filereadable("/Library/Frameworks/Python.framework/Versions/2.7/Python")
-    set pythondll=/Library/Frameworks/Python.framework/Versions/2.7/Python
-  endif
-endif
-
-if exists("&pythonthreedll") && exists("&pythonthreehome") && !filereadable(&pythonthreedll)
-  if filereadable("/opt/local/Library/Frameworks/Python.framework/Versions/3.10/Python")
-    set pythonthreedll=/opt/local/Library/Frameworks/Python.framework/Versions/3.10/Python
-  elseif filereadable("/Library/Frameworks/Python.framework/Versions/3.10/Python")
-    set pythonthreedll=/Library/Frameworks/Python.framework/Versions/3.10/Python
-  endif
-endif
-
-"------------------------------
-" キーマッピング設定
-"------------------------------
-" 基本的な入力支援
+" キーマッピング: 入力支援
 imap ( ()<Left>
 imap [ []<Left>
 imap { {}<Left>
 inoremap jj <ESC>
 
-" コマンド系・バッファ切替
+" キーマッピング: コマンド・バッファ切替
 nnoremap Y y$
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 nnoremap <silent> [b :bprevious<CR>
@@ -123,7 +125,7 @@ nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 
-" ウィンドウ、タブ操作
+" キーマッピング: ウィンドウ・タブ操作
 nmap Ss :split<Return><C-w>w
 nmap Sv :vsplit<Return><C-w>w
 nmap <Space> <C-w>w
@@ -138,85 +140,16 @@ nmap <C-w><down> <C-w>-
 nnoremap <Tab> :Tabnext<Return>
 nnoremap <S-Tab> :Tabprev<Return>
 
-" プラグイン用マッピング（vimfiler, unite等）
-nmap Sf :VimFilerBufferDir<Return>
-nmap SF :VimFilerExplorer -find<Return>
-nmap Sb :Unite buffer<Return>
-
-" コマンドライン履歴操作
+" キーマッピング: コマンドライン操作
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
-"------------------------------
-" プラグイン管理（Neobundle）
-"------------------------------
-" ※必要に応じて、vim-plug 等の他のプラグインマネージャへの移行も検討してください
-if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim
-endif
-
-call neobundle#begin(expand('~/.vim/bundle'))
-    NeoBundleFetch 'Shougo/neobundle.vim'
-    NeoBundle 'Shougo/unite.vim'
-    NeoBundle 'Shougo/neocomplcache'
-    NeoBundle 'Shougo/neosnippet'
-    NeoBundle 'Shougo/neosnippet-snippets'
-    NeoBundle 'nathanaelkane/vim-indent-guides'
-    NeoBundle 'itchyny/lightline.vim'
-    NeoBundle 'pangloss/vim-javascript'
-    NeoBundle 'vim-scripts/AnsiEsc.vim'
-    NeoBundle 'leafgarland/typescript-vim.git'
-    NeoBundle 'plasticboy/vim-markdown'
-    NeoBundle 'kannokanno/previm'
-    NeoBundle 'tyru/open-browser.vim'
-    NeoBundle 'Shougo/vimfiler'
-    NeoBundle 'vim-airline/vim-airline'
-    NeoBundle 'vim-airline/vim-airline-themes'
-call neobundle#end()
-NeoBundleCheck
-
-"------------------------------
-" Neobundle Snippet 設定
-"------------------------------
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
-
-imap <expr><TAB> pumvisible() ? "\<C-n>" : neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet-snippets/snippets/,~/.vim/snippets'
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_min_syntax_length = 3
-
-"------------------------------
-" VimFiler 設定
-"------------------------------
-let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_safe_mode_by_default = 0
-let g:vimfiler_enable_auto_cd = 0
-let g:vimfiler_tree_leaf_icon = ''
-let g:vimfiler_tree_opened_icon = '▾'
-let g:vimfiler_tree_closed_icon = '▸'
-let g:vimfiler_marked_file_icon = '✓'
-
-"------------------------------
-" Markdown 関連設定
-"------------------------------
+" Markdown 関連
 au BufRead,BufNewFile *.md set filetype=markdown
 if has('mac')
   let g:previm_open_cmd = 'open -a Google\ Chrome'
 endif
 
-"------------------------------
-" vim-indent-guides 設定
-"------------------------------
-let g:indent_guides_enable_on_vim_startup = 1
-
-"------------------------------
 " ファイルタイププラグインとインデント検出
-"------------------------------
 filetype plugin indent on
-"===============================================================================
+
