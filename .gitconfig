@@ -14,44 +14,28 @@
 	ui = auto
 
 [alias]
-	# シンプルなエイリアス
-	st = status
+	# ! means to deal alias as shell command: https://git-scm.com/docs/git-config#Documentation/git-config.txt-alias
+	a = "!git status --short | peco | awk '{print $2}' | xargs git add"
+	d = diff
 	co = checkout
 	ci = commit
 	ca = commit -a
-	d = diff
+	ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
+	pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
+	plm = pull origin master
+	st = status
 	br = branch
 	ba = branch -a
 	bm = branch --merged
 	bn = branch --no-merged
-
-	# ログ表示のエイリアス
-	hist = log --pretty=format:"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)" --graph --date=relative --decorate --all
-	llog = log --graph --name-status --pretty=format:"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset" --date=relative
-
-	# 現在のブランチに対する push / pull
-	ps = "!sh -c 'git push origin $(git rev-parse --abbrev-ref HEAD)'"
-	pl = "!sh -c 'git pull origin $(git rev-parse --abbrev-ref HEAD)'"
-	plm = pull origin master
-
-	# 変更ファイルを対話的に選んで add（ファイル名にスペースがあっても対応）
-	a = "!f() { git status --short -z | sed -z 's/^...//' | tr '\\0' '\\n' | peco --null | xargs -0 git add; }; f"
-
-	# hist の出力から選んだコミットの差分を表示する
-	df = "!f() { git hist | peco | awk '{print $1}' | xargs -I {} git diff {}^ {}; }; f"
-
-	# GitHub のリポジトリをブラウズ（hub コマンド必須）
+	df = "!git hist | peco | awk '{print $2}' | xargs -I {} git diff {}^ {}"
+	hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
+	llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
 	open = "!hub browse"
-
-	# オブジェクトのタイプ確認・内容ダンプ
 	type = cat-file -t
 	dump = cat-file -p
-
-	# 文字列検索し、対象コミットの差分を表示する
 	find = "!f() { git log --pretty=format:\"%h %cd [%cn] %s%d\" --date=relative -S'pretty' -S\"$@\" | peco | awk '{print $1}' | xargs -I {} git diff {}^ {}; }; f"
-
-	# マージコンフリクトが発生したファイルを vim で編集（存在チェック付き）
-	edit-unmerged = "!f() { files=$(git ls-files --unmerged | cut -f2 | sort -u); [ -n \"$files\" ] && vim $files || echo 'No unmerged files'; }; f"
-
-	# マージコンフリクトが発生したファイルを git add（存在チェック付き）
-	add-unmerged = "!f() { files=$(git ls-files --unmerged | cut -f2 | sort -u); [ -n \"$files\" ] && git add $files || echo 'No unmerged files'; }; f"
+	# edit conflicted file on merge
+	edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
+	# add conflicted file on merge
+	add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
