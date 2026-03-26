@@ -9,7 +9,12 @@
       "WebSearch:*",
       "WebFetch:*"
     ],
-    "defaultMode": "acceptEdits"
+    "defaultMode": "auto"
+  },
+  "enabledPlugins": {
+    "skill-creator@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true,
+  "skipDangerousModePermissionPrompt": true
 }
