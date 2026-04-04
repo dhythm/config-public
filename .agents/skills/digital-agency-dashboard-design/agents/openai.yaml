@@ -1,0 +1,4 @@
+interface:
+  display_name: "Digital Agency Dashboard Design"
+  short_description: "Design dashboards with Digital Agency guidance"
+  default_prompt: "Use $digital-agency-dashboard-design to design, review, or refactor a dashboard so it aligns with the Digital Agency guidebook and available Power BI assets."
