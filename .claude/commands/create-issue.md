@@ -28,7 +28,6 @@ description: Create an issue on GitHub and describe it
 
 - 見出しは h2 以降を使ってください
 - 日本語で記載してください
-- Type を Bug / Feature / Task のうちから適切なものを選択し、指定してください
 
 ### 作業詳細
 
