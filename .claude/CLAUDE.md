@@ -18,3 +18,12 @@
 - IMPORTANT: TDDを実践する際は t-wada の推奨する進め方に従う
 - IMPORTANT: リファクタリングは Martin Fowler が推奨する進め方に従う
 - IMPORTANT: TypeScript を書くときは原則として function を利用する（class を利用しない）
+
+## SKILL について
+
+以下のディレクトリを参照する。
+<dir> の部分は、グローバルであればホームディレクトリ、プロジェクトであればプロジェクトルート。
+ただし、再起的なディレクトリも使用可能。
+
+- <dir>/.claude/skills
+- <dir>/.agents/skills
