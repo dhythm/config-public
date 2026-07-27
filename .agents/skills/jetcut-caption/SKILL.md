@@ -104,22 +104,21 @@ uv run scripts/transcribe.py temp/voice_audio.wav temp/whisper_result.json
 
 ## Step 5: 字幕生成
 
-`scripts/generate_subtitles.py` を実行する。
+`scripts/generate_subtitles.py` を実行する。動画の向きでコマンドを使い分ける。
 
 ```bash
+# 横型動画（原則1行）
 uv run scripts/generate_subtitles.py temp/whisper_result.json temp/subtitles.json
+
+# 縦型動画（横幅が狭いため2行を許容、1行は短めに）
+uv run scripts/generate_subtitles.py temp/whisper_result.json temp/subtitles.json --two-line-mode --max-line-chars 12
 ```
 
 ### 字幕生成ルール
 
-1. **文字数制限**: 1テロップ最大30文字。超える場合は読点や文節境界で分割
-2. **行数制限**: 最大2行。18文字以下は1行、19〜30文字は2行に分割
-3. **フォントサイズ**: 最長行の文字数で決定
-   - 8文字以下: 72px
-   - 9〜12文字: 64px
-   - 13〜18文字: 56px
-   - 19〜24文字: 48px
-   - 25文字以上: 42px
+1. **行数**: 原則1テロップ=1行（横型動画）。2行は例外で、分割すると表示時間が0.6秒未満になる場合のみ隣のテロップと結合して2行にする。縦型動画は `--two-line-mode` で2行分割を標準とする
+2. **文字数制限**: 1行最大20文字（横型）/ 12文字（縦型）。超える場合は読点や文節境界で別テロップに分割
+3. **フォントサイズ**: 文字量によらず全テロップ固定（既定48px、1080p基準）。テロップごとにサイズを変えない
 4. **時間按分**: 分割時はstart/endを文字数比で按分
 
 ### 出力フォーマット
@@ -130,8 +129,8 @@ uv run scripts/generate_subtitles.py temp/whisper_result.json temp/subtitles.jso
     "id": 0,
     "start": 0.5,
     "end": 2.3,
-    "lines": ["1行目", "2行目"],
-    "fontSize": 56
+    "lines": ["原則1行のテキスト"],
+    "fontSize": 48
   }
 ]
 ```
@@ -204,8 +203,10 @@ rm temp/cut_video_converted.mp4
 ### Root.tsx
 `templates/Root.tsx` をコピーし、以下の値を実際の値に置き換える：
 - `durationInFrames`: カット済み動画の秒数 × 30
-- `width`: Step 7で取得した幅
-- `height`: Step 7で取得した高さ
+- `width` / `height`: **1080p基準の固定値**を使う（横型: 1920x1080 / 縦型: 1080x1920）。
+  動画の実解像度が低くても、コンポジションは1080p基準にして動画側を `objectFit: "contain"` でスケールする。
+  フォントサイズ（固定px）が1080p前提のため、動画の実寸をそのまま使うと低解像度動画で字幕が過大になる。
+  ただし動画のアスペクト比が16:9/9:16と異なる場合は、アスペクト比を保ったまま長辺を1920に合わせる。
 
 ### MainVideo.tsx, Subtitle.tsx
 `templates/` からそのままコピー。
